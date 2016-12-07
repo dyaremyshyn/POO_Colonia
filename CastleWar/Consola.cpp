@@ -7,6 +7,8 @@
 
 /* --> ver comentários em consola.h */
 
+//joao pedro
+
 #include "consola.h"                      
 #include <windows.h>
 #include <stdio.h>
