@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Jogo">
+      <UniqueIdentifier>{5daf1049-7c59-4520-afc7-33129d28face}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Jogo">
+      <UniqueIdentifier>{f71e6dd6-f4fe-44c4-aafe-a7c6bfdd6432}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Edificios">
+      <UniqueIdentifier>{7c65f281-92f4-4bab-a229-27687a5e378c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Caracteristicas">
+      <UniqueIdentifier>{19cd0198-0963-4e36-820f-8c6952f14fc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Seres">
+      <UniqueIdentifier>{49712c65-9ce0-4df6-96af-9fae0bb418fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Caracteristicas">
+      <UniqueIdentifier>{8c58a5bf-6751-4892-be19-89afd16e7d61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Edificios">
+      <UniqueIdentifier>{1cdeeb96-a66f-4c73-a108-98fe33be3f4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Seres">
+      <UniqueIdentifier>{a04ce7ed-af1f-4846-966c-c75c271e3d1a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Consola.cpp">
+      <Filter>Source Files\Jogo</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\Jogo</Filter>
+    </ClCompile>
+    <ClCompile Include="Interecao.cpp">
+      <Filter>Source Files\Jogo</Filter>
+    </ClCompile>
+    <ClCompile Include="Jogo.cpp">
+      <Filter>Source Files\Jogo</Filter>
+    </ClCompile>
+    <ClCompile Include="Ser.cpp">
+      <Filter>Source Files\Seres</Filter>
+    </ClCompile>
+    <ClCompile Include="Militar.cpp">
+      <Filter>Source Files\Seres</Filter>
+    </ClCompile>
+    <ClCompile Include="Civil.cpp">
+      <Filter>Source Files\Seres</Filter>
+    </ClCompile>
+    <ClCompile Include="Edificio.cpp">
+      <Filter>Source Files\Edificios</Filter>
+    </ClCompile>
+    <ClCompile Include="Castelo.cpp">
+      <Filter>Source Files\Edificios</Filter>
+    </ClCompile>
+    <ClCompile Include="Torre.cpp">
+      <Filter>Source Files\Edificios</Filter>
+    </ClCompile>
+    <ClCompile Include="Quinta.cpp">
+      <Filter>Source Files\Edificios</Filter>
+    </ClCompile>
+    <ClCompile Include="Caracteristica.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Bandeira.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Superior.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="PeleDura.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Armadura.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Faca.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Espada.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Agrassao.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Ecologico.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="HeatSeeker.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildSeeker.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Walker.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Remedio.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondChance.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Aluno.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
+    </ClCompile>
+    <ClCompile Include="Colonia.cpp">
+      <Filter>Source Files\Jogo</Filter>
+    </ClCompile>
+    <ClCompile Include="Posicao.cpp">
+      <Filter>Source Files\Jogo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Consola.h">
+      <Filter>Header Files\Jogo</Filter>
+    </ClInclude>
+    <ClInclude Include="Interacao.h">
+      <Filter>Header Files\Jogo</Filter>
+    </ClInclude>
+    <ClInclude Include="Jogo.h">
+      <Filter>Header Files\Jogo</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries.h">
+      <Filter>Header Files\Jogo</Filter>
+    </ClInclude>
+    <ClInclude Include="Agressao.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Aluno.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Armadura.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Bandeira.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildSeeker.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Caracteristica.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Ecologico.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Espada.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Faca.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="HeatSeeker.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="PeleDura.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Remedio.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondChance.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Superior.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Walker.h">
+      <Filter>Header Files\Caracteristicas</Filter>
+    </ClInclude>
+    <ClInclude Include="Castelo.h">
+      <Filter>Header Files\Edificios</Filter>
+    </ClInclude>
+    <ClInclude Include="Edificio.h">
+      <Filter>Header Files\Edificios</Filter>
+    </ClInclude>
+    <ClInclude Include="Quinta.h">
+      <Filter>Header Files\Edificios</Filter>
+    </ClInclude>
+    <ClInclude Include="Torre.h">
+      <Filter>Header Files\Edificios</Filter>
+    </ClInclude>
+    <ClInclude Include="Civil.h">
+      <Filter>Header Files\Seres</Filter>
+    </ClInclude>
+    <ClInclude Include="Ser.h">
+      <Filter>Header Files\Seres</Filter>
+    </ClInclude>
+    <ClInclude Include="Militar.h">
+      <Filter>Header Files\Seres</Filter>
+    </ClInclude>
+    <ClInclude Include="Colonia.h">
+      <Filter>Header Files\Jogo</Filter>
+    </ClInclude>
+    <ClInclude Include="Posicao.h">
+      <Filter>Header Files\Jogo</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
