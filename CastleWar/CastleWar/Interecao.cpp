@@ -28,13 +28,13 @@ void Interacao::Entrada()
 	}
 	c.setTextSize(8, 8);
 	c.setTextColor(c.VERMELHO_CLARO);
-	cout << "\n****************   OOOOOOOOOOOO)) OOOOOOOOOOOOO)) O))               ****************  \n";
-	cout << "****************   O))                  O))       O))               ****************  \n";
-	cout << "****************   O))                  O))       O))               ****************  \n";
-	cout << "****************   OOOOOO))             O))       O))               ****************  \n";
-	cout << "****************   O))                  O))       O))               ****************  \n";
-	cout << "****************   O))                  O))       O))               ****************  \n";
-	cout << "****************   O))                  O))       OOOOOOOOOOOOO))   ****************  \n";
+	cout << "\n****************   OOOOOOOOOOOO))  O))                  O))    ****************  \n";
+	cout << "****************   O))                O))                O))    ****************  \n";
+	cout << "****************   O))                 O))              O))     ****************  \n";
+	cout << "****************   O))                  O))     O      O))      ****************  \n";
+	cout << "****************   O))                   O))   OOO    O))       ****************  \n";
+	cout << "****************   O))                    O))  O O   O))        ****************  \n";
+	cout << "****************   O OOOOOOOOOOOO))        OOOO  OOOO           ****************  \n";
 	c.gotoxy(35, 92);
 	c.setTextColor(c.AMARELO_CLARO);
 	cout << "<<INSERT COIN!>>\n";
@@ -59,8 +59,10 @@ void Interacao::Novo_Jogo()
 	} while (!regex_match(n, regex_pattern));
 
 	int valor = atoi(n.c_str()); //converter string n para inteiro
-	jogo = new Jogo(valor);
+
+	jogo = new Jogo();
 }
+
 void Interacao::MostraAmbienteGrafico()
 {
 	c.setScreenSize(100, 170);
@@ -341,6 +343,8 @@ void Interacao::Configurar_Nave() {
 
 	}
 }
+
+/*
 void Interacao::Jogar()
 {
 	limpaParteDireita();
@@ -399,4 +403,4 @@ void Interacao::limpaParteDireita()
 	}
 	
 }
-
+*/

@@ -15,13 +15,18 @@ COLONIA recebe acções:
 	vender edificio
 	fazer seres
 */
+
+#define TAM 5
+
 class Colonia {
 	
 	Consola c;
 	
 	string nome;
 	int moedas;
-	int tamanho[5][5];
+	int tamanho;
+	int posInicial;
+
 	vector<Edificio*> edificios;
 	vector<Ser*> seres;
 	int iteracao;
@@ -30,7 +35,11 @@ public:
 	Colonia(string n, int m);
 	~Colonia();
 
+	string getNome();
 	void fazAccao();
+	int getTam();
+	void setPosInicial(int x);
+	int getPosInicial();
 
 };
 

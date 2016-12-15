@@ -93,9 +93,6 @@
     <ClCompile Include="Espada.cpp">
       <Filter>Source Files\Caracteristicas</Filter>
     </ClCompile>
-    <ClCompile Include="Agrassao.cpp">
-      <Filter>Source Files\Caracteristicas</Filter>
-    </ClCompile>
     <ClCompile Include="Ecologico.cpp">
       <Filter>Source Files\Caracteristicas</Filter>
     </ClCompile>
@@ -122,6 +119,12 @@
     </ClCompile>
     <ClCompile Include="Posicao.cpp">
       <Filter>Source Files\Jogo</Filter>
+    </ClCompile>
+    <ClCompile Include="Configuracoes.cpp">
+      <Filter>Source Files\Jogo</Filter>
+    </ClCompile>
+    <ClCompile Include="Agressao.cpp">
+      <Filter>Source Files\Caracteristicas</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -207,6 +210,9 @@
       <Filter>Header Files\Jogo</Filter>
     </ClInclude>
     <ClInclude Include="Posicao.h">
+      <Filter>Header Files\Jogo</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuracoes.h">
       <Filter>Header Files\Jogo</Filter>
     </ClInclude>
   </ItemGroup>

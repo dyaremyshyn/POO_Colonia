@@ -146,7 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Agrassao.cpp" />
+    <ClCompile Include="Agressao.cpp" />
     <ClCompile Include="Aluno.cpp" />
     <ClCompile Include="Armadura.cpp" />
     <ClCompile Include="Bandeira.cpp" />
@@ -155,6 +155,7 @@
     <ClCompile Include="Castelo.cpp" />
     <ClCompile Include="Civil.cpp" />
     <ClCompile Include="Colonia.cpp" />
+    <ClCompile Include="Configuracoes.cpp" />
     <ClCompile Include="Consola.cpp" />
     <ClCompile Include="Ecologico.cpp" />
     <ClCompile Include="Edificio.cpp" />
@@ -185,6 +186,7 @@
     <ClInclude Include="Castelo.h" />
     <ClInclude Include="Civil.h" />
     <ClInclude Include="Colonia.h" />
+    <ClInclude Include="Configuracoes.h" />
     <ClInclude Include="Consola.h" />
     <ClInclude Include="Ecologico.h" />
     <ClInclude Include="Edificio.h" />

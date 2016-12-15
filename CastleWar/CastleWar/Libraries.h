@@ -18,7 +18,7 @@
 
 
 
-
+#include "Configuracoes.h"
 #include "Consola.h"
 using namespace std;
 #endif
