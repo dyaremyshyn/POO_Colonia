@@ -32,11 +32,11 @@ int Configuracoes::getTamanho()
 {
 	return t;
 }
-
-int Configuracoes::getFoco()
-{
-	return f;
-}
+//
+//int Configuracoes::getFoco()
+//{
+//	return f;
+//}
 
 int Configuracoes::getMoedas()
 {

@@ -8,11 +8,11 @@ class Interacao {
 public:
 	Interacao();
 	void Entrada(); //Função só para ficar com um aspeto grafico inicial mais bonito
-	void Configurar_Nave(); //Função para ler comandos inseridos pelo utilizador
+	//void Configurar(); //Função para ler comandos inseridos pelo utilizador
 	void MostraAmbienteGrafico(); //Mostrar nave
 	void next() { }
 	void Novo_Jogo();
-	void Jogar();
+	//void Jogar();
 	
 	void Jogo_A_Iniciar();
 
@@ -22,6 +22,6 @@ private:
 	bool configuracao = false;
 	Jogo *jogo;//Ponteiro para poder aceder a classe jogo
 	bool jogo_criado;
-	void limpaParteDireita();
+	//void limpaParteDireita();
 };
 

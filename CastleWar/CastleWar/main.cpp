@@ -8,10 +8,10 @@ int main(int argc, char** argv) {
 
 	//********************** INTERFACE **************************************
 	Interacao control;
-	//control.Entrada();
+	control.Entrada();
 	control.Novo_Jogo();
-	control.MostraAmbienteGrafico();
-	control.Configurar_Nave();
+	/*control.MostraAmbienteGrafico();
+	control.Configurar_Jogo();
 	control.Jogar();
-
+	*/
 }

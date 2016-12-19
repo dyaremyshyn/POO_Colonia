@@ -2,6 +2,7 @@
 
 #ifndef SER_H
 #define	SER_H
+
 #include "Libraries.h"
 
 class Ser;
@@ -20,7 +21,7 @@ class Ser {
 
 public:
 	Ser(string n, int nCar);
-	Ser(string n, int nCar, vector<Caracteristica*> c);
+	//Ser(string n, int nCar, vector<Caracteristica*> &c);
 	~Ser();
 
 	string getNome();

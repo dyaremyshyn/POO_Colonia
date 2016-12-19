@@ -11,7 +11,7 @@ using namespace std;
 class Configuracoes {
 
 	int dificuldade;
-	int t, f;
+	int t;
 	int moedas;
 	
 	string nome_ficheiro;

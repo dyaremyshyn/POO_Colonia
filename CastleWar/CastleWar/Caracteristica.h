@@ -19,8 +19,6 @@ protected:
 	~Caracteristica();
 
 public:
-	
-
 
 	int getCustoMonetario();
 	int getCustoForça();

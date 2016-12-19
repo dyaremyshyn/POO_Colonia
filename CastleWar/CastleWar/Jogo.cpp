@@ -59,7 +59,7 @@ int Jogo::escolhePosColonia(int col)
 	int x = 0;
 	do {
 		x = 1 + (rand() % (int)(mundo.size()-1 - 1 + 1)); 
-		if ((x + colonias.at(col)->getTam()) <= mundo.size() - 1 && !mundo.at(x)->verificaColonia) {
+		if (((x + colonias.at(col)->getTam()) <= (mundo.size() - 1)) && (!mundo.at(x)->verificaColonia())) {
 			colonias.at(col)->setPosInicial(x);
 			return x;
 		}
@@ -94,33 +94,30 @@ vector<Colonia*> Jogo::getColonias()
 	string ori(o);
 	string des(d);
 
-		if (stoi(ori) > 12 || stoi(des) > 12)
+		if (stoi(ori) > mundo.size() || stoi(des) > mundo.size())
 		{
 			//c.gotoxy(6, 35);
 			cout << "Salas invalidas!";
 			return;
 		}
-		if (salas[stoi(ori)-1]->VerificaExisteUnidade(un) == true)
+		if (mundo[stoi(ori)-1]->VerificaExisteSer(un) == true)
 		{
-			salas[stoi(des)-1]->AdicionaUnidade(salas[stoi(ori)-1]->RemoveUnidade(un));
+			mundo[stoi(des)-1]->AdicionaSer(mundo[stoi(ori)-1]->RemoveSer(un));
 		}
 }
 
 void Jogo::turno()   
 {
-	int propulsao=0;
+	
 	iteracao += 1;
 
-	if (!chegouFim(percurso)) {
+	if (!chegouFim()) {
 			
-		for (unsigned int i = 0; i < salas.size(); i++) //Verificar quantos propulsores a nave tem, a potencia da nave para deslocar-se é diretamente proporcional aos propulsores instalados
+		for (unsigned int i = 0; i < mundo.size(); i++) 
 		{
-			if (salas[i]->getnome() == "Propulsor")
-			{
-				propulsao += salas[i]->getintegridade();
-			}
+			
 		}
-		percurso += propulsao;
+		
 	}
 }
 */

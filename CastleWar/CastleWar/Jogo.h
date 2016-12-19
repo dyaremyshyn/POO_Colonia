@@ -9,6 +9,7 @@
 
 #define TAM_MAX 20
 #define F_MAX 10
+
 class Configuracoes;
 class Sala;
 class Evento;

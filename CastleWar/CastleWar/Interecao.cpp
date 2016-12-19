@@ -182,57 +182,17 @@ void Interacao::MostraAmbienteGrafico()
 	cout << ">>:";
 
 	/*********************************************Desenhar Salas****************************************/
-	int x = 6;
-	int y = 6;
-	for (unsigned int i = 0; i < 12; i++)
-	{
-		c.gotoxy(x, y);
-		cout << jogo->getNomeSala(i);
-		if (jogo->getNomeSala(i) != "?")
-		{
-			//Integridade  nesta sala
-			c.gotoxy(x, y + 1);
-			cout << "I: " << jogo->getIntegridade(i);
-			//Oxigenio  nesta sala
-			c.gotoxy(x, y + 2);
-			cout << "O: " << jogo->getOxigenio(i);
-			//Unidades que estao nesta sala
-			c.gotoxy(x, y + 3);
-			cout << "U: " << jogo->getUnidades(i);
-			//*****//
-		}
-		x = x + 20;
-		if (x == 86)
-		{
-			x = 28;
-			y = 14;
-		}
-		if (x == 108 && y == 14)
-		{
-			x = 6;
-			y = 23;
-		}
-	}
+	
 	/*****************************************Acabou de Desenhar Salas**************************************/
-	if (configuracao == false)
-		{
-			Jogo_A_Iniciar();
-			c.gotoxy(120, 15);
-			cout << "Tripulantes disponiveis para mover: ";
-			c.gotoxy(120, 16);
-			jogo->TripulantesDisponiveis();
-		}
-	else
-	{
-		jogo->DadosViagem();
-	}
+	
+
 }
 void Interacao::Jogo_A_Iniciar()
 {
 
 	/*************************************Mostrar comandos disponiveis********************************/
 	c.gotoxy(135, 2);
-	cout << "Configure a nave: ";
+	cout << "Configure a Colonia: ";
 	c.gotoxy(120, 3);
 	cout << "Comandos: ";
 	c.gotoxy(120, 4);
@@ -255,6 +215,7 @@ void Interacao::Jogo_A_Iniciar()
 	cout << "or -> Oficina Robotica";
 
 }
+/*
 void Interacao::Configurar_Nave() {
 	//regex regex_pattern("\s");
 	
@@ -344,7 +305,6 @@ void Interacao::Configurar_Nave() {
 	}
 }
 
-/*
 void Interacao::Jogar()
 {
 	limpaParteDireita();

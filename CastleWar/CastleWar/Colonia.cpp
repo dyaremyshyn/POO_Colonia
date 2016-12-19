@@ -2,8 +2,6 @@
 
 Colonia::Colonia(string n, int m):nome(n), moedas(m)
 {
-
-	
 }
 
 Colonia::~Colonia()

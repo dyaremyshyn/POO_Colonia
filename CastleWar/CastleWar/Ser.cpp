@@ -15,18 +15,21 @@ Ser::Ser(string n="Pessoa", int nCar=2):nome(n)
 	calcularCusto();
 }
 
-Ser::Ser(string n, int nCar=1, vector<Caracteristica*> c): nome(n)
-{
-	caracteristicas.resize(nCar);
-	saude = 10;
-	ataque = 2;
-	defesa = 2;
-
-	for(int i =0;i<c.size();i++)
-		ganhaCaracteristas(c.at(i));
-
-	calcularCusto();
-}
+//Ser::Ser(string n, int nCar=1)
+//{
+//	
+//	nome = n;
+//	caracteristicas.resize(nCar);
+//	
+//	saude =10;
+//	ataque = 2;
+//	defesa = 2;
+//
+//	/*for(int i =0;i<c.size();i++)
+//		ganhaCaracteristas(c.at(i));*/
+//
+//	calcularCusto();
+//}
 
 Ser::~Ser()
 {
