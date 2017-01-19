@@ -54,12 +54,6 @@
     <ClCompile Include="Ser.cpp">
       <Filter>Source Files\Seres</Filter>
     </ClCompile>
-    <ClCompile Include="Militar.cpp">
-      <Filter>Source Files\Seres</Filter>
-    </ClCompile>
-    <ClCompile Include="Civil.cpp">
-      <Filter>Source Files\Seres</Filter>
-    </ClCompile>
     <ClCompile Include="Edificio.cpp">
       <Filter>Source Files\Edificios</Filter>
     </ClCompile>
@@ -197,13 +191,7 @@
     <ClInclude Include="Torre.h">
       <Filter>Header Files\Edificios</Filter>
     </ClInclude>
-    <ClInclude Include="Civil.h">
-      <Filter>Header Files\Seres</Filter>
-    </ClInclude>
     <ClInclude Include="Ser.h">
-      <Filter>Header Files\Seres</Filter>
-    </ClInclude>
-    <ClInclude Include="Militar.h">
       <Filter>Header Files\Seres</Filter>
     </ClInclude>
     <ClInclude Include="Colonia.h">

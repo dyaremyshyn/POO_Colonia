@@ -14,7 +14,7 @@ class Edificio {
 	int defesa;
 
 public:
-	Edificio(string n, int c);
+	Edificio(string n, int c, int s, int d);
 	~Edificio();
 
 	string getNome();

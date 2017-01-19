@@ -1,6 +1,6 @@
 #include "Quinta.h"
 
-Quinta::Quinta(string n, int c): Edificio(n,c)
+Quinta::Quinta(string n, int c,int s, int d): Edificio(n,c,s,d)
 {
 }
 

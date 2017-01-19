@@ -4,6 +4,8 @@
 #define	WALKER_H
 #include "Libraries.h"
 #include "Caracteristica.h"
+#include "Ser.h"
+#include "Posicao.h"
 
 class Ser;
 class Jogo;

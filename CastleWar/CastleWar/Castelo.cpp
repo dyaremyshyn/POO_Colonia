@@ -1,6 +1,6 @@
 #include "Castelo.h"
 
-Castelo::Castelo(string n, int c):Edificio(n,c)
+Castelo::Castelo(string n, int c, int s, int d):Edificio(n,c,s,d)
 {
 }
 

@@ -13,7 +13,7 @@ class Quinta : public Edificio {
 	string nome;
 
 public:
-	Quinta(string n, int c);
+	Quinta(string n, int c, int s, int d);
 	~Quinta();
 
 };

@@ -18,7 +18,7 @@ class Posicao {
 public:
 	string getEdifico();
 	void setEdificio(Edificio *e);
-	string getSer();
+	Ser getSer();
 	void setSer(Ser *s);
 	string getColonia();
 	void setColonia(Colonia *c);

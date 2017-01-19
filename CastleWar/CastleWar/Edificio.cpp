@@ -1,6 +1,6 @@
 #include "Edificio.h"
 
-Edificio::Edificio(string n, int c): nome(n), custo(c)
+Edificio::Edificio(string n, int c, int s, int d): nome(n), custo(c), saude(s), defesa(d)
 {
 }
 

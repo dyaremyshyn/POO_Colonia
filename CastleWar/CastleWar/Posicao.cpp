@@ -10,9 +10,9 @@ void Posicao::setEdificio(Edificio * e)
 	this->e = e;
 }
 
-string Posicao::getSer()
+Ser Posicao::getSer()
 {
-	return s->getNome();
+	return *s;;
 }
 
 void Posicao::setSer(Ser * s)

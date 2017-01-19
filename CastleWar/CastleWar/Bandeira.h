@@ -4,7 +4,6 @@
 #define	BANDEIRA_H
 #include "Libraries.h"
 #include "Caracteristica.h"
-#include "Edificio.h"
 
 class Ser;
 class Jogo;

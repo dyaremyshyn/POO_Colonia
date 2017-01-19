@@ -13,7 +13,7 @@ class Castelo: public Edificio {
 	string nome;
 
 public:
-	Castelo(string n, int c);
+	Castelo(string n, int c, int s, int d);
 	~Castelo();
 
 	void fazEfeito();
