@@ -1,8 +1,8 @@
 #include "Jogo.h"
 
-Jogo::Jogo(){
+Jogo::Jogo(string fConfig){
 
-	config = new Configuracoes("config.txt");
+	config = new Configuracoes("config.txt"); //substituir por fConfig
 	iteracao = 0;
 	
 	mundo.resize(config->getTamanho()*config->getTamanho());
@@ -17,6 +17,25 @@ Jogo::Jogo(){
 
 	addPrimeirosSeres();
 	
+	addPrimeirosEdificios();
+
+
+}
+
+Jogo::Jogo(int d, int t, int m) {
+	iteracao = 0;
+
+	mundo.resize(t*t);
+	colonias.resize(d + 1);
+
+	colonias.at(1) = new Colonia("MyColony", m);
+	for (int i = 2; i < d + 1; i++)
+		colonias.at(i) = new Colonia("Colonia" + i - 1, m);
+
+	preencheMundo();
+
+	addPrimeirosSeres();
+
 	addPrimeirosEdificios();
 
 
@@ -48,7 +67,7 @@ void Jogo::addPrimeirosEdificios()
 		do {
 			x = colonias.at(i)->getPosInicial() + (rand() % (int)((colonias.at(i)->getPosInicial() + colonias.at(i)->getTam()) - colonias.at(i)->getPosInicial() + 1));
 			if (!mundo.at(x)->verificaEdifico()) {
-				mundo.at(x)->setEdificio(new Castelo("Castelo", 0));
+				mundo.at(x)->setEdificio(new Castelo("Castelo", 0,50,10));
 			}
 		} while (mundo.at(x)->verificaEdifico());
 	}

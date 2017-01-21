@@ -4,11 +4,11 @@
 
 
 class Interacao {
-	Consola c;
+	
 public:
 	Interacao();
 	void Entrada(); //Função só para ficar com um aspeto grafico inicial mais bonito
-	//void Configurar(); //Função para ler comandos inseridos pelo utilizador
+	void Configurar_Jogo(); //Função para ler comandos inseridos pelo utilizador
 	void MostraAmbienteGrafico(); //Mostrar nave
 	void next() { }
 	void Novo_Jogo();
@@ -23,5 +23,7 @@ private:
 	Jogo *jogo;//Ponteiro para poder aceder a classe jogo
 	bool jogo_criado;
 	//void limpaParteDireita();
+	void loadPorFich();
+	void criarJogo();
 };
 

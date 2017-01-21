@@ -18,7 +18,6 @@ class Posicao;
 
 class Jogo{
 
-	Consola c;
 	Configuracoes *config;
 
 	vector <Posicao*> mundo;
@@ -31,7 +30,8 @@ class Jogo{
 
 public:
 
-    Jogo();
+    Jogo(string fConfig);
+	Jogo(int d, int t, int m);
     ~Jogo();
 
 	void addPrimeirosSeres();

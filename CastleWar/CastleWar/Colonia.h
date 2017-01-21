@@ -20,8 +20,6 @@ COLONIA recebe acções:
 
 class Colonia {
 	
-	Consola c;
-	
 	string nome;
 	int moedas;
 	int tamanho;

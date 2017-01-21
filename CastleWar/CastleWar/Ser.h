@@ -4,11 +4,13 @@
 #define	SER_H
 
 #include "Libraries.h"
+#include "Posicao.h"
 
 class Ser;
 class Edificio;
 class Jogo;
 class Caracteristica;
+class Posicao;
 
 class Ser {
 	Posicao *pos;

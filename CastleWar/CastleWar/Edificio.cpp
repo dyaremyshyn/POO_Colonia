@@ -2,6 +2,7 @@
 
 Edificio::Edificio(string n, int c, int s, int d): nome(n), custo(c), saude(s), defesa(d)
 {
+	eid++;
 }
 
 Edificio::~Edificio()
@@ -46,4 +47,9 @@ int Edificio::getDefesa()
 void Edificio::setDefesa(int d)
 {
 	defesa = d;
+}
+
+int Edificio::getEID()
+{
+	return eid;
 }

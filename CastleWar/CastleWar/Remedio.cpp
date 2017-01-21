@@ -16,7 +16,7 @@ void Remedio::fazEfeito(Posicao * p, Ser * s)
 			s->setSaude(s->getSaude() + 2);
 		}
 		else {
-			s->setSaude(s->getSaude() + 2)
+			s->setSaude(s->getSaude() + 2);
 		}
 	}
 }

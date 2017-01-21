@@ -12,6 +12,7 @@ class Edificio {
 	string nome;
 	int saude;
 	int defesa;
+	int eid=0;
 
 public:
 	Edificio(string n, int c, int s, int d);
@@ -28,6 +29,8 @@ public:
 
 	int getDefesa();
 	void setDefesa(int d);
+
+	int getEID();
 
 	virtual void fazEfeito() = 0;
 

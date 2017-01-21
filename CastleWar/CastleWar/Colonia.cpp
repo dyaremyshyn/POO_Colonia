@@ -1,8 +1,6 @@
 #include "Colonia.h"
 
-Colonia::Colonia(string n, int m):nome(n), moedas(m)
-{
-}
+Colonia::Colonia(string n, int m):nome(n), moedas(m){}
 
 Colonia::~Colonia()
 {

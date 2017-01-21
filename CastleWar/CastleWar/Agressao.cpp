@@ -11,7 +11,5 @@ Agressao::~Agressao()
 
 void Agressao::fazEfeito(Posicao * p, Ser * s)
 {
-	s->ge
-	
-	if(p->getSer().)
+
 }

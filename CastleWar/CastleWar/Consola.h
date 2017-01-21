@@ -1,9 +1,18 @@
+// Biblioteca Consola para TP de POO
+// Última alteracao: 16/17 - Dez 2016
+// J
 
-/* Funcoes da consola. Dez 2010 */
+/*
+Versoes e historial
+Dez 2010 - Implementação: Funcoes da consola + exemplo + comentários
+Nov 2013 - Pequenas correcções
+Dez 2015 - Comentários melhorados
+Dez 2016 - Exemplo melhorado.
+- Compatibilidade com mingw automatizada
+- As funções passaram a ser estáticas
+*/
 
-/* Pequenas correcoes. Nov. 2013 */
 
-/* Comentarios melhorados. Dez. 2015 */
 
 #ifndef __CONSOLA_H__
 #define __CONSOLA_H__
@@ -12,9 +21,9 @@
 
 class Consola {
 
-	HANDLE hconsola;
-	HANDLE hStdin;
-	HWND hwnd;
+	static HANDLE hconsola;
+	static HANDLE hStdin;
+	static HWND hwnd;
 
 public:
 
@@ -44,53 +53,58 @@ public:
 	const static char ENTER = 13;
 	const static char ESCAPE = 27;
 
-	Consola();
-	// Posiciona o cursor na posição x,y
-	// - Os proximos cout/cin serão feitos a partir daí
-	void gotoxy(int x, int y);
+	Consola() = delete;  // Nao quero objectos disto a proliferarem por ai.
+						 // As funcçõe são estáticas por alguma razão.
+						 // ----------> C++ 2011 ou posterior
+
+						 // Posiciona o cursor na posição x,y
+						 // - Os proximos cout/cin serão feitos a partir daí
+	static void gotoxy(int x, int y);
+
+	static void clrscr_comandline();
 
 	// Limpa o ecrã
 	// - Usa a côr de fundo que estiver definida
-	void clrscr();
-	void clrscr_comandline();
+	static void clrscr();
+
 	// Muda a côr das letras
 	// - Os cout/cin seguintes usarão essa côr
-	void setTextColor(WORD color);
+	static void setTextColor(WORD color);
 
 	// Muda a côr de fundo
 	// - Os printf/cout seguintes usarão essa côr
 	// - Os clrsrc() seguintes usarão essa côr de fundo
-	void setBackgroundColor(WORD color);
+	static void setBackgroundColor(WORD color);
 
 	// Muda a dimensão do ecrã para NLinhas x NCols
 	// - O redimensionamento pode falhar se o tamanho
 	//   indicado for excessivo ou se for demasiado
 	//   pequeno
 	// - Limpa o ecrã usando a côr que estiver definida?
-	void setScreenSize(int nLinhas, int nCols);
+	static void setScreenSize(int nLinhas, int nCols);
 
 	// Muda (tenta mudar) o tamanho da letra
 	// - Esta função pode falhar em determinadas situações
 	//   (falhar = não muda nada)
 	//   É mais provável falhar no sistemas antigos (XP)
 	// - Ver também setSTextSizeXP
-	void setTextSize(int x, int y);
+	static void setTextSize(int x, int y); // ##### Mingw ->Sem efeito (Não disponivel) #####
 
-	// Muda (tenta mudar) o tamanho da letra para XP (alguém ainda usa isso?)
-	// - Esta função é para usar apenas no caso do sistema
-	//   ser o XP
-	//   No outros sistemas existe a função setTextSize
-	// - Pode falhar em determinadas situações
-	//   (falhar = não muda nada)
-	// - Ver também setSTextSizeXP
-	void setTextSizeXP(int x, int y);
+										   // Muda (tenta mudar) o tamanho da letra para XP (alguém ainda usa isso?)
+										   // - Esta função é para usar apenas no caso do sistema
+										   //   ser o XP
+										   //   No outros sistemas existe a função setTextSize
+										   // - Pode falhar em determinadas situações
+										   //   (falhar = não muda nada)
+										   // - Ver também setSTextSizeXP
+	static void setTextSizeXP(int x, int y);  // ##### Mingw ->Sem efeito (Não disponivel) #####
 
-	// Lê um caracter sem precisar de "enter" no fim
-	// - Util para fazer pausas do tipo
-	//   "press any key to continue"
-	// - Esta funcionalidade também se consegue de
-	//   outras formas
-	char getch(void);
+											  // Lê um caracter sem precisar de "enter" no fim
+											  // - Util para fazer pausas do tipo
+											  //   "press any key to continue"
+											  // - Esta funcionalidade também se consegue de
+											  //   outras formas
+	static char getch(void);
 
 	// As duas funções seguintes são pouco interessantes
 
@@ -101,16 +115,16 @@ public:
 	// - A linha não fica memorizada. Desaparece quando:
 	//   . Se oculta e volta a mostrar a janela da consola
 	//   . Se redimensiona a janela
-	void drawLine(int x1, int y1, int x2, int y2, int cor);
+	static void drawLine(int x1, int y1, int x2, int y2, int cor);  // ##### Mingw ->Sem efeito (Não disponivel) #####
 
-	// Desenha um círculo usando pixeis (não é com caracteres)
-	// - Esta é uma função gráfica. Trabalha com pixeis
-	// - Os pixeis do círculo ficam sobrepostos ao texto
-	// Esta função é pouco interessante porque:
-	// - O círculo não fica memorizado. Desaparece quando:
-	//   . Se oculta e volta a mostrar a janela da consola
-	//   . Se redimensiona a janela
-	void drawCircle(int X, int Y, int R, int Pen, int Fill);
+																	// Desenha um círculo usando pixeis (não é com caracteres)
+																	// - Esta é uma função gráfica. Trabalha com pixeis
+																	// - Os pixeis do círculo ficam sobrepostos ao texto
+																	// Esta função é pouco interessante porque:
+																	// - O círculo não fica memorizado. Desaparece quando:
+																	//   . Se oculta e volta a mostrar a janela da consola
+																	//   . Se redimensiona a janela
+	static void drawCircle(int X, int Y, int R, int Pen, int Fill);  // ##### Mingw ->Sem efeito (Não disponivel) #####
 };
 
 #endif
