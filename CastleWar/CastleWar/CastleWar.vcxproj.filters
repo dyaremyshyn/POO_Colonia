@@ -120,6 +120,9 @@
     <ClCompile Include="Agressao.cpp">
       <Filter>Source Files\Caracteristicas</Filter>
     </ClCompile>
+    <ClCompile Include="Perfil.cpp">
+      <Filter>Source Files\Jogo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Consola.h">
@@ -201,6 +204,9 @@
       <Filter>Header Files\Jogo</Filter>
     </ClInclude>
     <ClInclude Include="Configuracoes.h">
+      <Filter>Header Files\Jogo</Filter>
+    </ClInclude>
+    <ClInclude Include="Perfil.h">
       <Filter>Header Files\Jogo</Filter>
     </ClInclude>
   </ItemGroup>

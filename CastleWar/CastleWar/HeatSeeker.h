@@ -15,7 +15,7 @@ class HeatSeeker :public Caracteristica {
 
 
 public:
-	HeatSeeker(string n, int cm, int cf);
+	HeatSeeker(string n, int cm, int cf,int idCar);
 	~HeatSeeker();
 
 	void fazEfeito(Posicao *p, Ser *s);

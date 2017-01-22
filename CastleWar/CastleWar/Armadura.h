@@ -15,7 +15,7 @@ class Armadura :public Caracteristica {
 
 
 public:
-	Armadura(string n, int cm, int cf);
+	Armadura(string n, int cm, int cf,int idCar);
 	~Armadura();
 
 	void fazEfeito(Posicao *p, Ser *s);

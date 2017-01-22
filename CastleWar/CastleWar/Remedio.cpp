@@ -1,6 +1,6 @@
 #include "Remedio.h"
 
-Remedio::Remedio(string n, int cm, int cf) : Caracteristica(n, cm, cf)
+Remedio::Remedio(string n, int cm, int cf,int idCar) : Caracteristica(n, cm, cf, idCar)
 {
 	cont = 0;
 }

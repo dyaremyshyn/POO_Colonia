@@ -13,7 +13,7 @@ class Bandeira :public Caracteristica {
 	
 
 public:
-	Bandeira(string n, int cm, int cf);
+	Bandeira(string n, int cm, int cf,int idCar);
 	~Bandeira();
 	
 	void fazEfeito(Posicao *p, Ser *s);                 

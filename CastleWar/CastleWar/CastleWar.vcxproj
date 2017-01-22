@@ -165,6 +165,7 @@
     <ClCompile Include="Jogo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PeleDura.cpp" />
+    <ClCompile Include="Perfil.cpp" />
     <ClCompile Include="Posicao.cpp" />
     <ClCompile Include="Quinta.cpp" />
     <ClCompile Include="Remedio.cpp" />
@@ -194,6 +195,7 @@
     <ClInclude Include="Jogo.h" />
     <ClInclude Include="Libraries.h" />
     <ClInclude Include="PeleDura.h" />
+    <ClInclude Include="Perfil.h" />
     <ClInclude Include="Posicao.h" />
     <ClInclude Include="Quinta.h" />
     <ClInclude Include="Remedio.h" />

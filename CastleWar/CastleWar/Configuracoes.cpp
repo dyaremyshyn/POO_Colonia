@@ -15,7 +15,7 @@ Configuracoes::Configuracoes(string nf="config.txt"): nome_ficheiro(nf) {
 
 	cout << leFicheiro(nome_ficheiro) << endl;
 
-	getAsString();
+	//getAsString();
 
 }
 
@@ -23,24 +23,24 @@ Configuracoes::~Configuracoes()
 {
 }
 
-int Configuracoes::getDificuldade()
+int Configuracoes::getCol()
 {
-	return dificuldade;
+	return col;
 }
 
-int Configuracoes::getTamanho()
+int Configuracoes::getLin()
 {
-	return t;
+	return lin;
 }
-//
-//int Configuracoes::getFoco()
-//{
-//	return f;
-//}
 
 int Configuracoes::getMoedas()
 {
 	return moedas;
+}
+
+int Configuracoes::getOponentes()
+{
+	return oponentes;
 }
 
 
@@ -57,7 +57,7 @@ bool Configuracoes::leFicheiro(string nome_ficheiro) {
 		
 		getline(dados, linha);
 		istringstream iss(linha);
-		iss >> this->dificuldade >> t >> moedas;
+		iss >> this->lin >> col >> moedas>> oponentes;
 
 		return true;
 
@@ -66,8 +66,8 @@ bool Configuracoes::leFicheiro(string nome_ficheiro) {
 	return false;
 };
 
-void Configuracoes::getAsString()const {
-
-	cout << "dificuldade:" << this->dificuldade << " tamanho:" << this->t  << " moedas:" << this->moedas << endl;
-
-};
+//void Configuracoes::getAsString()const {
+//
+//	cout << "tamanho:" << this->dificuldade << " tamanho:" << this->t  << " moedas:" << this->moedas << endl;
+//
+//};

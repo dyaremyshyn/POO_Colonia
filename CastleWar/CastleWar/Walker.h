@@ -15,7 +15,7 @@ class Walker :public Caracteristica {
 
 
 public:
-	Walker(string n, int cm, int cf);
+	Walker(string n, int cm, int cf,int idCar);
 	~Walker();
 
 	void fazEfeito(Posicao *p, Ser *s);

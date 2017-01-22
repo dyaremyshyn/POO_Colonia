@@ -15,7 +15,7 @@ class Ecologico :public Caracteristica {
 
 
 public:
-	Ecologico(string n, int cm, int cf);
+	Ecologico(string n, int cm, int cf,int idCar);
 	~Ecologico();
 
 	void fazEfeito(Posicao *p, Ser *s);

@@ -1,11 +1,16 @@
 #include "Caracteristica.h"
 
-Caracteristica::Caracteristica(string n, int cm, int cf):nome(n), custo_monetario(cm),custo_forca(cf)
+Caracteristica::Caracteristica(string n, int cm, int cf, int idCar):nome(n), custo_monetario(cm),custo_forca(cf),id(idCar)
 {
 }
 
 Caracteristica::~Caracteristica()
 {
+}
+
+string Caracteristica::getNome()
+{
+	return nome;
 }
 
 int Caracteristica::getCustoMonetario()
@@ -16,5 +21,10 @@ int Caracteristica::getCustoMonetario()
 int Caracteristica::getCustoForça()
 {
 	return custo_forca;
+}
+
+int Caracteristica::getID()
+{
+	return id;
 }
 

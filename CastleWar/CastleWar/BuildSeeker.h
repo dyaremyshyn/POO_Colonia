@@ -15,7 +15,7 @@ class BuildSeeker :public Caracteristica {
 
 
 public:
-	BuildSeeker(string n, int cm, int cf);
+	BuildSeeker(string n, int cm, int cf,int idCar);
 	~BuildSeeker();
 
 	void fazEfeito(Posicao *p, Ser *s);

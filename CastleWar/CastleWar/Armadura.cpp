@@ -1,6 +1,6 @@
 #include "Armadura.h"
 
-Armadura::Armadura(string n, int cm, int cf) : Caracteristica(n, cm, cf)
+Armadura::Armadura(string n, int cm, int cf,int idCar) : Caracteristica(n, cm, cf, idCar)
 {
 }
 

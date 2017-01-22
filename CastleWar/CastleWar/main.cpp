@@ -12,6 +12,6 @@ int main(int argc, char** argv) {
 	control.Novo_Jogo();
 	control.MostraAmbienteGrafico();
 	control.Configurar_Jogo();
-	//control.Jogar();
+	control.Jogar();
 	
 }

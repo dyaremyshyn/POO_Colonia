@@ -15,7 +15,7 @@ class Faca :public Caracteristica {
 
 
 public:
-	Faca(string n, int cm, int cf);
+	Faca(string n, int cm, int cf,int idCar);
 	~Faca();
 
 	void fazEfeito(Posicao *p, Ser *s);

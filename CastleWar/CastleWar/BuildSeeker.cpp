@@ -1,6 +1,6 @@
 #include "BuildSeeker.h"
 
-BuildSeeker::BuildSeeker(string n, int cm, int cf) : Caracteristica(n, cm, cf)
+BuildSeeker::BuildSeeker(string n, int cm, int cf,int idCar) : Caracteristica(n, cm, cf, idCar)
 {
 }
 

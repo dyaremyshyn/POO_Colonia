@@ -20,7 +20,7 @@ COLONIA recebe acções:
 
 class Colonia {
 	
-	string nome;
+	char nome;
 	int moedas;
 	int tamanho;
 	int posInicial;
@@ -30,14 +30,16 @@ class Colonia {
 	int iteracao;
 
 public:
-	Colonia(string n, int m);
+	Colonia(char n, int m);
 	~Colonia();
 
-	string getNome();
+	char getNome();
 	void fazAccao();
 	int getTam();
 	void setPosInicial(int x);
 	int getPosInicial();
+
+	void listaColonia();
 
 };
 

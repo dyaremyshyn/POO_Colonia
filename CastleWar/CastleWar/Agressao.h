@@ -17,7 +17,7 @@ class Agressao :public Caracteristica {
 
 
 public:
-	Agressao(string n, int cm, int cf);
+	Agressao(string n, int cm, int cf,int idCar);
 	~Agressao();
 
 	void fazEfeito(Posicao *p, Ser *s);

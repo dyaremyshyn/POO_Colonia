@@ -15,7 +15,7 @@ class Espada :public Caracteristica {
 	int cont;
 
 public:
-	Espada(string n, int cm, int cf);
+	Espada(string n, int cm, int cf,int idCar);
 	~Espada();
 	void setCont(int c);
 	int getCont();

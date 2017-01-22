@@ -1,12 +1,12 @@
 #include "Colonia.h"
 
-Colonia::Colonia(string n, int m):nome(n), moedas(m){}
+Colonia::Colonia(char n, int m):nome(n), moedas(m){}
 
 Colonia::~Colonia()
 {
 }
 
-string Colonia::getNome()
+char Colonia::getNome()
 {
 	return nome;
 }

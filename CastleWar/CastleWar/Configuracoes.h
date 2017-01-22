@@ -10,8 +10,8 @@ using namespace std;
 
 class Configuracoes {
 
-	int dificuldade;
-	int t;
+	int lin, col;
+	int oponentes;
 	int moedas;
 	
 	string nome_ficheiro;
@@ -22,13 +22,14 @@ public:
 	Configuracoes(string nome_ficheiro);
 	~Configuracoes();
 	
-	int getDificuldade();
-	int getTamanho();
-	int getFoco();
+	int getCol();
+	int getLin();
+	
 	int getMoedas();
+	int getOponentes();
 
 	bool leFicheiro(string nome_ficheiro);
-	void getAsString()const;
+	//void getAsString()const;
 };
 
 #endif /* CONFIGURACOES_H */

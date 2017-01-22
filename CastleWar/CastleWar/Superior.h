@@ -16,7 +16,7 @@ class Superior :public Caracteristica {
 
 
 public:
-	Superior(string n, int cm, int cf);
+	Superior(string n, int cm, int cf,int idCar);
 	~Superior();
 
 	void fazEfeito(Posicao *p, Ser *s);

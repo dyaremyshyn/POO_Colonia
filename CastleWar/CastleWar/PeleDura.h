@@ -15,7 +15,7 @@ class PeleDura :public Caracteristica {
 
 
 public:
-	PeleDura(string n, int cm, int cf);
+	PeleDura(string n, int cm, int cf,int idCar);
 	~PeleDura();
 
 	void fazEfeito(Posicao *p, Ser *s);
