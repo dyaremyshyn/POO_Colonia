@@ -42,3 +42,8 @@ void Perfil::setCustoForca(int cf)
 {
 	custo_forca = cf;
 }
+
+vector<Caracteristica*> Perfil::getCaracteristicas()
+{
+	return car;
+}

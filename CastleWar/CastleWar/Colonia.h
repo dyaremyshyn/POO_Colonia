@@ -2,6 +2,8 @@
 #ifndef COLONIA_H
 #define	COLONIA_H
 #include "Libraries.h"
+#include "Edificio.h"
+#include "Castelo.h"
 
 class Ser;
 class Edificio;
@@ -33,14 +35,22 @@ public:
 	Colonia(char n, int m);
 	~Colonia();
 
+	vector<Edificio*> getEdificios();
+	vector<Ser*> getSeres();
+
+
 	char getNome();
 	void fazAccao();
 	int getTam();
 	void setPosInicial(int x);
 	int getPosInicial();
+	void setMoedas(int m);
+	int getMoedas();
+	void addEdificio(Edificio *e);
+	void removeEdificio(int id);
+	void addSer(Ser* s);
 
-	void listaColonia();
-
+	int saudeCastelo();
 };
 
 #endif	/* COLONIA_H */

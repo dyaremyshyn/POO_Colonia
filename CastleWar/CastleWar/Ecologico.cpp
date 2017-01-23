@@ -8,6 +8,6 @@ Ecologico::~Ecologico()
 {
 }
 
-void Ecologico::fazEfeito(Posicao * p, Ser * s)
+void Ecologico::fazEfeito(int p, Ser * s)
 {
 }

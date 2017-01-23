@@ -13,27 +13,35 @@ class Caracteristica;
 class Posicao;
 
 class Ser {
-	Posicao *pos;
+	int pos;
 	string nome;
 	int custo;
 	vector<Caracteristica*> caracteristicas;
 	string bandeira;
 	
 	int saude;
+	int maxSaude;
 	int forca;
 	int velocidade;
 	int ataque;
 	int defesa;
 	
+	bool castelo;
 
 public:
-	Ser(string n, int nCar);
+	Ser(string n, vector<Caracteristica*>c);
 	~Ser();
 
 	string getNome();
 
+	void setPos(int p);
+	int getPos();
+
 	void setSaude(int v);
 	int getSaude();
+
+	void setMaxSaude(int s);
+	int getMaxSaude();
 
 	void setDefesa(int d);
 	int getDefesa();
@@ -47,12 +55,17 @@ public:
 	void setForca(int f);
 	int getForca();
 
+	vector<Caracteristica*> getCaracteristicas();
+
 	void ganhaCaracteristas(Caracteristica *c);
 	void calcularCusto();
 
+
+	void mover();
 	void efeitoCaracteristicas();
 
-	boolean foraCastelo();
 
+	boolean dentroCastelo();
+	void setCastelo(bool c);
 };
 #endif	/* SER_H */

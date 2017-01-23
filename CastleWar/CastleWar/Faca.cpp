@@ -8,7 +8,7 @@ Faca::~Faca()
 {
 }
 
-void Faca::fazEfeito(Posicao * p, Ser * s)
+void Faca::fazEfeito(int p, Ser * s)
 {
 	s->setAtaque(s->getAtaque() + 1);
 }

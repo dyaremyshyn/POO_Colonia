@@ -1,8 +1,8 @@
 #include "Posicao.h"
 
-string Posicao::getEdifico()
+Edificio* Posicao::getEdifico()
 {
-	return e->getNome();
+	return e;
 }
 
 void Posicao::setEdificio(Edificio * e)
@@ -10,9 +10,9 @@ void Posicao::setEdificio(Edificio * e)
 	this->e = e;
 }
 
-Ser Posicao::getSer()
+Ser* Posicao::getSer()
 {
-	return *s;;
+	return s;;
 }
 
 void Posicao::setSer(Ser * s)
@@ -20,7 +20,7 @@ void Posicao::setSer(Ser * s)
 	this->s = s;
 }
 
-string Posicao::getColonia()
+char Posicao::getColonia()
 {
 	return c->getNome();
 }

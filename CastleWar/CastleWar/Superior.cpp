@@ -8,7 +8,7 @@ Superior::~Superior()
 {
 }
 
-void Superior::fazEfeito(Posicao * p, Ser * s)
+void Superior::fazEfeito(int p, Ser * s)
 {
 	s->setSaude(s->getSaude() + 1);
 }

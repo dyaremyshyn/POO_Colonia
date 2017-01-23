@@ -12,7 +12,9 @@ class Edificio {
 	string nome;
 	int saude;
 	int defesa;
+	int pos;
 	int eid=0;
+	int nivel;
 
 public:
 	Edificio(string n, int c, int s, int d);
@@ -20,6 +22,12 @@ public:
 
 	string getNome();
 	void setNome(string n);
+	
+	int getNivel();
+	void setNivel(int n);
+
+	int getPos();
+	void setPos(int p);
 
 	int getCusto();
 	void setCusto(int c);
@@ -33,6 +41,8 @@ public:
 	int getEID();
 
 	virtual void fazEfeito() = 0;
+
+	void aumentaNivel();
 
 
 };

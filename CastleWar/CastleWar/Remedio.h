@@ -18,7 +18,7 @@ public:
 	Remedio(string n, int cm, int cf,int idCar);
 	~Remedio();
 
-	void fazEfeito(Posicao *p, Ser *s);
+	void fazEfeito(int p, Ser *s);
 
 };
 

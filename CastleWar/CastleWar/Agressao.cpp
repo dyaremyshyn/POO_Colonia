@@ -9,7 +9,7 @@ Agressao::~Agressao()
 {
 }
 
-void Agressao::fazEfeito(Posicao * p, Ser * s)
+void Agressao::fazEfeito(int p, Ser * s)
 {
 
 }

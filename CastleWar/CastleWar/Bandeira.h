@@ -16,7 +16,7 @@ public:
 	Bandeira(string n, int cm, int cf,int idCar);
 	~Bandeira();
 	
-	void fazEfeito(Posicao *p, Ser *s);                 
+	void fazEfeito(int p, Ser *s);                 
 
 };
 

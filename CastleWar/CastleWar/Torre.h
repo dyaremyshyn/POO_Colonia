@@ -11,13 +11,13 @@ class Jogo;
 class Torre : public Edificio {
 	int custo;
 	string nome;
-	int nivel;
+
 
 public:
 	Torre(string n, int c, int s, int d);
 	~Torre();
 
 	void fazEfeito();
-	void aumentaNivel();
+
 };
 #endif	/* TORRE_H */

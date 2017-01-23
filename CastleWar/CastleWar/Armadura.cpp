@@ -8,7 +8,7 @@ Armadura::~Armadura()
 {
 }
 
-void Armadura::fazEfeito(Posicao * p, Ser * s)
+void Armadura::fazEfeito(int p, Ser * s)
 {
 	s->setDefesa(s->getDefesa() + 2);
 }

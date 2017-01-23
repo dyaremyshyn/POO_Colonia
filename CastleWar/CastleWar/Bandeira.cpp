@@ -7,7 +7,7 @@ Bandeira::~Bandeira()
 }
 
 
-void Bandeira::fazEfeito(Posicao *p, Ser *s)
+void Bandeira::fazEfeito(int p, Ser *s)
 {
 	
 }

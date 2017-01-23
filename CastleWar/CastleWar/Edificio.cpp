@@ -3,6 +3,8 @@
 Edificio::Edificio(string n, int c, int s, int d): nome(n), custo(c), saude(s), defesa(d)
 {
 	eid++;
+	nivel = 1;
+
 }
 
 Edificio::~Edificio()
@@ -17,6 +19,26 @@ string Edificio::getNome()
 void Edificio::setNome(string n)
 {
 	nome = n;
+}
+
+int Edificio::getNivel()
+{
+	return nivel;
+}
+
+void Edificio::setNivel(int n)
+{
+	nivel = n;
+}
+
+int Edificio::getPos()
+{
+	return 0;
+}
+
+void Edificio::setPos(int p)
+{
+	pos = p;
 }
 
 int Edificio::getCusto()
@@ -52,4 +74,9 @@ void Edificio::setDefesa(int d)
 int Edificio::getEID()
 {
 	return eid;
+}
+
+void Edificio::aumentaNivel()
+{
+	nivel++;
 }

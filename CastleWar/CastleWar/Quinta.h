@@ -11,14 +11,13 @@ class Jogo;
 class Quinta : public Edificio {
 	int custo;
 	string nome;
-	int nivel;
+	
 
 public:
 	Quinta(string n, int c, int s, int d);
 	~Quinta();
 
 	void fazEfeito();
-	void aumentaNivel();
 
 };
 #endif	/* QUINTA_H */

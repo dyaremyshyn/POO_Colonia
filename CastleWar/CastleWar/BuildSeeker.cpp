@@ -8,6 +8,6 @@ BuildSeeker::~BuildSeeker()
 {
 }
 
-void BuildSeeker::fazEfeito(Posicao * p, Ser * s)
+void BuildSeeker::fazEfeito(int p, Ser * s)
 {
 }

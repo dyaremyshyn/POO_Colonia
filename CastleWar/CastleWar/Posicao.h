@@ -16,12 +16,15 @@ class Posicao {
 
 
 public:
-	string getEdifico();
+	Edificio* getEdifico();
 	void setEdificio(Edificio *e);
-	Ser getSer();
+
+	Ser* getSer();
 	void setSer(Ser *s);
-	string getColonia();
+
+	char getColonia();
 	void setColonia(Colonia *c);
+
 	bool verificaColonia();
 	bool verificaEdifico();
 	bool verificaSer();

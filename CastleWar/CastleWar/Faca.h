@@ -18,7 +18,7 @@ public:
 	Faca(string n, int cm, int cf,int idCar);
 	~Faca();
 
-	void fazEfeito(Posicao *p, Ser *s);
+	void fazEfeito(int p, Ser *s);
 
 };
 

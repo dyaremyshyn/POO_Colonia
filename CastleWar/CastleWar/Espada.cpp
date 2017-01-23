@@ -19,7 +19,7 @@ int Espada::getCont()
 	return cont;
 }
 
-void Espada::fazEfeito(Posicao * p, Ser * s)
+void Espada::fazEfeito(int p, Ser * s)
 {
 	if (getCont() < 2) {
 		s->setAtaque(s->getAtaque() + 3);

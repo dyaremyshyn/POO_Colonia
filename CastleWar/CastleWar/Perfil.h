@@ -14,6 +14,9 @@ class Perfil {
 	char nome;
 	vector <Caracteristica*> car;
 	int custo_forca;
+	int ataque;
+	int defesa;
+	int velocidade;
 
 public:
 
@@ -27,6 +30,7 @@ public:
 	int getCustoForca();
 	void setCustoForca(int cf);
 
+	vector <Caracteristica*> getCaracteristicas();
 };
 
 

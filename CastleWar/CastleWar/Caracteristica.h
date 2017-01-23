@@ -23,7 +23,7 @@ public:
 
 	int getCustoMonetario();
 	int getCustoForça();
-	virtual void fazEfeito(Posicao *p, Ser *s) = 0;
+	virtual void fazEfeito(int p, Ser *s) = 0;
 	int getID();
 	
 };

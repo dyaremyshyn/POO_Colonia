@@ -8,6 +8,6 @@ Aluno::~Aluno()
 {
 }
 
-void Aluno::fazEfeito(Posicao * p, Ser * s)
+void Aluno::fazEfeito(int p, Ser * s)
 {
 }

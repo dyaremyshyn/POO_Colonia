@@ -20,7 +20,7 @@ public:
 	void setCont(int c);
 	int getCont();
 
-	void fazEfeito(Posicao *p, Ser *s);
+	void fazEfeito(int p, Ser *s);
 
 };
 

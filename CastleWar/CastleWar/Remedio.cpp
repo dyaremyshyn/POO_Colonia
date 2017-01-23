@@ -9,14 +9,16 @@ Remedio::~Remedio()
 {
 }
 
-void Remedio::fazEfeito(Posicao * p, Ser * s)
+void Remedio::fazEfeito(int p, Ser * s)
 {
 	if (s->getSaude() <= 3) {
-		if (cont < 1 && s->foraCastelo()) {
-			s->setSaude(s->getSaude() + 2);
+		if (cont < 1 && !s->dentroCastelo()) {
+			if (s->getSaude()<s->getMaxSaude())
+				s->setSaude(s->getSaude() + 2);
 		}
 		else {
-			s->setSaude(s->getSaude() + 2);
+			if(s->getSaude()<s->getMaxSaude())
+				s->setSaude(s->getSaude() + 2);
 		}
 	}
 }

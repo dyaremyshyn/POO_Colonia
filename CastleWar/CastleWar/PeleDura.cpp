@@ -8,7 +8,7 @@ PeleDura::~PeleDura()
 {
 }
 
-void PeleDura::fazEfeito(Posicao * p, Ser * s)
+void PeleDura::fazEfeito(int p, Ser * s)
 {
 	s->setDefesa(s->getDefesa() + 1);
 }

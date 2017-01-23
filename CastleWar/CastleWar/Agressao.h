@@ -20,7 +20,7 @@ public:
 	Agressao(string n, int cm, int cf,int idCar);
 	~Agressao();
 
-	void fazEfeito(Posicao *p, Ser *s);
+	void fazEfeito(int p, Ser *s);
 
 };
 

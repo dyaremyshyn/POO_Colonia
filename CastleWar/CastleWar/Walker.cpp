@@ -9,7 +9,7 @@ Walker::~Walker()
 {
 }
 
-void Walker::fazEfeito(Posicao *p, Ser *s)
+void Walker::fazEfeito(int p, Ser *s)
 {
 
 }

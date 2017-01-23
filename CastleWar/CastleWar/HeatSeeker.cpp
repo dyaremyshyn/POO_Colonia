@@ -8,6 +8,6 @@ HeatSeeker::~HeatSeeker()
 {
 }
 
-void HeatSeeker::fazEfeito(Posicao * p, Ser * s)
+void HeatSeeker::fazEfeito(int p, Ser * s)
 {
 }

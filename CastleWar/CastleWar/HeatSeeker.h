@@ -18,7 +18,7 @@ public:
 	HeatSeeker(string n, int cm, int cf,int idCar);
 	~HeatSeeker();
 
-	void fazEfeito(Posicao *p, Ser *s);
+	void fazEfeito( int p, Ser *s);
 
 };
 

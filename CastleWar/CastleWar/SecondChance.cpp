@@ -8,6 +8,6 @@ SecondChance::~SecondChance()
 {
 }
 
-void SecondChance::fazEfeito(Posicao * p, Ser * s)
+void SecondChance::fazEfeito(int p, Ser * s)
 {
 }
