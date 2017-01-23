@@ -2,7 +2,7 @@
 #include "Walker.h"
 #include "Bandeira.h"
 
-Ser::Ser(string n, vector<Caracteristica*>c):nome(n), caracteristicas(c) {
+Ser::Ser(char n, vector<Caracteristica*>c):nome(n), caracteristicas(c) {
 	
 	saude = 10;
 	maxSaude = 10;
@@ -19,7 +19,7 @@ Ser::Ser(string n, vector<Caracteristica*>c):nome(n), caracteristicas(c) {
 
 Ser::~Ser(){}
 
-string Ser::getNome()
+char Ser::getNome()
 {
 	return nome;
 }
@@ -108,7 +108,7 @@ void Ser::ganhaCaracteristas(Caracteristica *c)
 void Ser::calcularCusto()
 {
 	
-	for (int i = 0; i < caracteristicas.size(); i++)
+	for (unsigned int i = 0; i < caracteristicas.size(); i++)
 		custo += caracteristicas.at(i)->getCustoMonetario();
 
 }
@@ -121,7 +121,7 @@ void Ser::mover()
 
 void Ser::efeitoCaracteristicas()
 {
-	for (int i = 0; i < caracteristicas.size(); i++) {
+	for (unsigned int i = 0; i < caracteristicas.size(); i++) {
 		caracteristicas[i]->fazEfeito(pos, this);
 	}
 

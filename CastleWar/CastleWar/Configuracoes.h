@@ -29,7 +29,7 @@ public:
 	int getOponentes();
 
 	bool leFicheiro(string nome_ficheiro);
-	//void getAsString()const;
+
 };
 
 #endif /* CONFIGURACOES_H */

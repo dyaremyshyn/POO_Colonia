@@ -25,9 +25,6 @@
 #include "SecondChance.h"
 
 
-#define TAM_MAX 20
-#define F_MAX 10
-
 class Configuracoes;
 class Sala;
 class Evento;
@@ -62,11 +59,11 @@ public:
 	void removePerfil(char p);
 
 	void loadFicheiro(string f);
-	void ComecarAJogar();
+	//void ComecarAJogar();
 
 	//void addPrimeirosSeres();
-	void addPrimeirosEdificios();
-	int escolhePosColonia(int col);
+	//void addPrimeirosEdificios();
+	//int escolhePosColonia(int col);
 	void preencheMundo();
 	Colonia* getMyColonia();
 
@@ -75,10 +72,10 @@ public:
 	
 	//FUNCOES DE CMD MODO JOGO ON
 	void setMoedasNumaColonia(char c, int m);
-	void buildEdif(string nomeEdif, int pos, Colonia* c);
+	void buildEdif(char nomeEdif, int pos, Colonia* c);
 	void listaColonia(char c);
 	void mostraCarDePerfil(char c);
-	void mkBuild(string e, int l, int c, char col);
+	void mkBuild(char e, int l, int c, char col);
 	void repairBuild(int id);
 	void upgradeBuild(int id);
 	void sellBuild(int id);
@@ -88,6 +85,8 @@ public:
 	bool lerComandosFicheiro(string fich);
 
 	void turno();
+
+	void removeMortos();
 
 	void criaMundo(int dim);
 	void criaMyColonia(int m);

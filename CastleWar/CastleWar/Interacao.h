@@ -15,10 +15,12 @@ public:
 	void Jogar();
 	
 	void Jogo_A_Iniciar();
-	void MostraMundo(int foco);
+	void MostraMundo();
 
-
+	void setFoco(int f);
+	int getFoco();
 private:
+	int foco;
 	bool configuracao = false;
 	Jogo *jogo;//Ponteiro para poder aceder a classe jogo
 	bool jogo_criado;

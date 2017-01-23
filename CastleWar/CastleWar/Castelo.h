@@ -14,7 +14,7 @@ class Castelo: public Edificio {
 	vector<Ser*> seres;
 
 public:
-	Castelo(string n, int c, int s, int d);
+	Castelo(char n, int c, int s, int d);
 	~Castelo();
 	
 	void fazEfeito();

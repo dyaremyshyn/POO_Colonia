@@ -10,7 +10,7 @@ class Edificio;
 class Ser;
 
 class Posicao {
-	Colonia *c;
+	//Colonia *c;
 	Edificio *e;
 	Ser *s;
 
@@ -22,10 +22,10 @@ public:
 	Ser* getSer();
 	void setSer(Ser *s);
 
-	char getColonia();
-	void setColonia(Colonia *c);
+	//char getColonia();
+	//void setColonia(Colonia *c);
 
-	bool verificaColonia();
+	//bool verificaColonia();
 	bool verificaEdifico();
 	bool verificaSer();
 

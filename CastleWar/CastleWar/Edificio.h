@@ -9,7 +9,7 @@ class Jogo;
 
 class Edificio {
 	int custo;
-	string nome;
+	char nome;
 	int saude;
 	int defesa;
 	int pos;
@@ -17,11 +17,11 @@ class Edificio {
 	int nivel;
 
 public:
-	Edificio(string n, int c, int s, int d);
+	Edificio(char n, int c, int s, int d);
 	~Edificio();
 
-	string getNome();
-	void setNome(string n);
+	char getNome();
+	void setNome(char n);
 	
 	int getNivel();
 	void setNivel(int n);

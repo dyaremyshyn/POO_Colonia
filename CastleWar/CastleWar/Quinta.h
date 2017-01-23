@@ -14,7 +14,7 @@ class Quinta : public Edificio {
 	
 
 public:
-	Quinta(string n, int c, int s, int d);
+	Quinta(char n, int c, int s, int d);
 	~Quinta();
 
 	void fazEfeito();

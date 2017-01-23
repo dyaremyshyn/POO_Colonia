@@ -20,22 +20,22 @@ void Posicao::setSer(Ser * s)
 	this->s = s;
 }
 
-char Posicao::getColonia()
-{
-	return c->getNome();
-}
+//char Posicao::getColonia()
+//{
+//	return c->getNome();
+//}
 
-void Posicao::setColonia(Colonia * c)
-{
-	this->c = c;
-}
+//void Posicao::setColonia(Colonia * c)
+//{
+//	this->c = c;
+//}
 
-bool Posicao::verificaColonia()
-{
-	if (c != NULL)
-		return true;
-	return false;
-}
+//bool Posicao::verificaColonia()
+//{
+//	if (c != NULL)
+//		return true;
+//	return false;
+//}
 
 bool Posicao::verificaEdifico()
 {
@@ -53,9 +53,9 @@ bool Posicao::verificaSer()
 
 Posicao::Posicao()
 {
-	e = NULL;
-	s = NULL;
-	c = NULL;
+	e = nullptr;
+	s = nullptr;
+	//c = NULL;
 }
 
 Posicao::~Posicao()

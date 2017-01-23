@@ -1,11 +1,12 @@
 #include "Interacao.h"
+#include <sstream>
 #include "Jogo.h"
 class Evento;
 
 Interacao::Interacao()
 {
 		jogo_criado = false; //O jogador ainda nao iniciou o jogo
-		
+		foco = 14;
 }
 void Interacao::Entrada()
 {
@@ -77,9 +78,9 @@ void Interacao::loadPorFich() {
 	regex regex_pattern("^[1-9]+$");
 	do
 	{
-		Consola::gotoxy(3, 38);
-		Consola::clrscr_comandline();
 		do {
+			Consola::gotoxy(3, 38);
+			Consola::clrscr_comandline();
 			cout << "Introduza o nome do ficheiro: ";
 			cin >> n;
 			myReadFile.open(n);
@@ -125,7 +126,7 @@ void Interacao::MostraAmbienteGrafico()
 	}
 
 
-	/*Desenhar janela direita onde vai estar o historico de eventos*/
+	/*Desenhar janela direita onde vai estar comandos*/
 	Consola::gotoxy(181, 1);
 	for (int i = 0; i < 52; i++) //Desenhar linha horizontal superior da janela
 		cout << char(220);
@@ -210,12 +211,14 @@ void Interacao::MostraAmbienteGrafico()
 
 }
 
-void Interacao::MostraMundo(int foco){
+void Interacao::MostraMundo(){
+	char e = ' ', s = ' ';
+
 	int inicio = 0, fim = 0;
 	int aux = 0;
 
 	if (foco < jogo->getMundo().size()) {
-		//inicio = jogo->getMyColonia()->getPosInicial() - 12;
+		
 		inicio = foco - 12;
 		fim = foco + 12;
 
@@ -229,8 +232,32 @@ void Interacao::MostraMundo(int foco){
 			inicio = inicio - aux;
 			fim = jogo->getMundo().size() - 1;
 		}
-
+		int x = 10, y = 10;
+		for (unsigned int i = inicio; i < fim; i++){
+			Consola::gotoxy(x, y);
+			Consola::setTextColor(Consola::VERDE);
+			if(jogo->getMundo().at(i)->getSer()!=nullptr)
+				s = jogo->getMundo().at(i)->getSer()->getNome();
+			cout << s;
+			Consola::gotoxy(x, y);
+			Consola::setTextColor(Consola::AZUL);
+			if (jogo->getMundo().at(i)->getEdifico() != nullptr)
+				e= jogo->getMundo().at(i)->getEdifico()->getNome();
+			cout << e;
+			
+			x = x + 20;
+			if (x == 86)
+			{
+				x = 28;
+				y = 14;
+			}
+			if (x == 108 && y == 14)
+			{
+				x = 6;
+				y = 23;
+			}
 		
+		}
 
 
 	}
@@ -238,6 +265,16 @@ void Interacao::MostraMundo(int foco){
 		// mostra msg de foco fora da planicie 
 	}
 
+}
+
+void Interacao::setFoco(int f)
+{
+	foco = f;
+}
+
+int Interacao::getFoco()
+{
+	return foco;
 }
 
 
@@ -274,139 +311,89 @@ void Interacao::Jogo_A_Iniciar()
 
 void Interacao::Configurar_Jogo() {
 
+	//getline(cin, comando)
+	//stringstream ss;
+	//ss << aMinhaString << 12 ;
+	//ss >> variavel;
+	//ss >> outraVariavel
+
 	while (1) {
 		Consola::gotoxy(3, 55);
 		string comando, cmd;
-		int dim = -1, money = -1, opo = -1;
+		string comand="";
 		
-		Consola::clrscr_comandline();
+		Consola::gotoxy(6, 52);
 		getline(cin, comando);
-
-		istringstream iss(comando);
-		iss >> cmd;
+		
+		stringstream ss(comando);
+		ss >> cmd;
 
 		if (cmd == "dim") {
 			int lin,col;
-			Consola::clrscr_comandline();
+			ss >> lin >> col;
 			Consola::gotoxy(3, 52);
-			cout << ">> Linhas: ";
-			cin >> lin;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> Colunas: ";
-			cin >> col;
-			dim = lin*col;
-			jogo->criaMundo(dim);
+			jogo->criaMundo(lin*col);
 		}
 		if (cmd == "moedas") {
 			int moedas;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> Num moedas: ";
-			cin >> moedas;
-			money = moedas;
-			jogo->criaMyColonia(money);
+			ss >> moedas;
+			jogo->criaMyColonia(moedas);
 		}
 		if (cmd == "oponentes") {
 			int oponentes;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> Num oponentes: ";
-			cin >> oponentes;
-			opo = oponentes;
-			jogo->criaColOponentes(1000, opo);
+			ss >> oponentes;
+			jogo->criaColOponentes(1000, oponentes);
 		}
 		if (cmd == "castelo") {
-			string nome;
+			char nome;
 			int l, c;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> Nome Castelo: ";
-			cin >> nome;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> Linhas: ";
-			cin >> l;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> Colunas: ";
-			cin >> c;
-			int pos = l*c;
-			jogo->getMyColonia()->setPosInicial(pos);
-			
+			ss >> nome >> l >> c;
+			jogo->getMyColonia()->setPosInicial(l*c);
 		}
 		if (cmd == "mkperfil") {
 			char perfil;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << "Letra para o perfil: ";
-			cin >> perfil;
-
+			ss >> perfil;
 			jogo->addPerfil(new Perfil(perfil));
 		}
 		if (cmd == "addperfil") {
 			char perf;
 			int idCar;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> Letra para o perfil: ";
-			cin >> perf;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> ID da Caracteristica: ";
-			cin >> idCar;
-
+			ss >> perf >> idCar;
 			jogo->addCarAoPerfil(perf, idCar);
 		}
 		if (cmd == "subperfil") {
 			char perf;
 			int idC;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> Letra para o perfil: ";
-			cin >> perf;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> ID da Caracteristica: ";
-			cin >> idC;
 
+			ss >> perf >> idC;
 			jogo->removeCarAoPerfil(perf, idC);
 		}
 		if (cmd == "rmperfil") {
 			char p;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> Letra para o perfil: ";
-			cin >> p;
+
+			ss >> p;
 
 			jogo->removePerfil(p);
 		}
 		if (cmd == "load") {
 			string fich;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> Nome do ficheiro: ";
-			cin >> fich;
+			
+			ss >> fich;
 
 			jogo->loadFicheiro(fich);
 		}
 		if (cmd == "inicio") {
-			if (dim == -1 && money == -1 && opo == -1)
-			{
-				Consola::gotoxy(3, 52);
-				cout << ">> Falta preencher parametros...";
-				getchar();
-			}
-			else {
-				jogo_criado = true;
-				if (jogo->getMyColonia()->getPosInicial() == 0)
-					jogo->getMyColonia()->setPosInicial(14);
-				jogo->ComecarAJogar();
-				Jogar();
-			}
+			jogo_criado = true;
+			if (jogo->getMyColonia()->getPosInicial() == 0)
+				jogo->getMyColonia()->setPosInicial(14);
+
+			jogo->preencheMundo();
+			Jogar();
 		}
 
-		
+		Consola::clrscr();
+		MostraAmbienteGrafico();
+
 	}
 }
 
@@ -461,153 +448,80 @@ void Interacao::Jogar()
 {
 	limpaParteDireita();
 	ComandosJogo();
-	jogo->turno();
+	MostraMundo();
 	//jogo->DadosJogo();
 	configuracao = true;
 	while (1) { //Ler comandos quando estamos a jogar
-		
-		regex regex_pattern("[a-z][0-9]+");
 		Consola::gotoxy(3, 55);
 		string comando, cmd;
-		Consola::clrscr_comandline();
-		getline(cin, comando);
+		string comand = "";
 
-		if (comando == "next") { // Validação para passar à próxima iteracção
+		stringstream ss(comando);
+		ss >> cmd;
+		if (cmd == "next") { // Validação para passar à próxima iteracção
 			int n=1;
-			Consola::clrscr_comandline();
-			Consola::gotoxy(3, 52);
-			cout << ">> Num de turnos: ";
-			cin >> n;
+			ss >> n;
 			for (int i = 0; i < n; i++) {
 				jogo->turno(); //O utilizador não quer alterar nada, e avança no turno
 			}
-			MostraAmbienteGrafico();
+			//redesenha mundo
+
 		}
 		else {
-			istringstream iss(comando);
-			iss >> cmd;
 			//*******************************Comandos Relativos a Controlo da Colonia************************************
 			if (cmd == "foco") { //regex_match(cmd, regex_pattern
 				int lin=0, col=0;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Linha: ";
-				cin >> lin;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Coluna: ";
-				cin >> col;
-
-				MostraAmbienteGrafico();
-				MostraMundo(lin*col);
-				
+				ss >> lin >> col;
+				setFoco(lin*col);
+				MostraMundo();
 			}
 			if (cmd == "setmoedas") {
 				char colonia;
 				int moedas;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Colonia: ";
-				cin >> colonia;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Num Moedas: ";
-				cin >> moedas;
-
+				ss >> colonia >> moedas;
 				jogo->setMoedasNumaColonia(colonia, moedas);
 			}
 			if (cmd == "build") {
 				int lin = 0, col = 0;
-				string edif;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Edificio: ";
-				cin >> edif;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Linha: ";
-				cin >> lin;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Coluna: ";
-				cin >> col;
-
+				char edif;
+				ss >> edif>>lin>>col;
 				jogo->buildEdif(edif, lin*col,jogo->getMyColonia());
 			}
 			if (cmd == "list") {
 				char colon;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Colonia: ";
-				cin >> colon;
-
+				ss >> colon;
 				limpaParteDireita();
 				jogo->listaColonia(colon);
 			}
 			if (cmd == "listp") {
 				char perf;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Perfil: ";
-				cin >> perf;
-
+				ss >> perf;
 				limpaParteDireita();
 				jogo->mostraCarDePerfil(perf);
 			}
 			if (cmd == "mkbuild") {
-				string ed;
+				char ed;
 				int l, c;
 				char colonia;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Edificio: ";
-				cin >> ed;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Linha: ";
-				cin >> l;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Coluna: ";
-				cin >> c;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Colonia: ";
-				cin >> colonia;
+				ss >> ed >> l >> c>>colonia;
 
 				jogo->mkBuild(ed, l, c, colonia);
 
 			}
 			if (cmd == "repair") {
 				int id=0;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> EID: ";
-				cin >> id;
-
+				ss >> id;
 				jogo->repairBuild(id);
 			}
 			if (cmd == "upgrade") {
 				int id=0;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> EID: ";
-				cin >> id;
-
+				ss >> id;
 				jogo->upgradeBuild(id);
 			}
 			if (cmd == "ser") {
 				int num;
 				char p;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Numero de seres: ";
-				cin >> num;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Perfil: ";
-				cin >> p;
-
+				ss >> num >> p;
 				jogo->criaSer(num, p);
 			}
 			if (cmd == "ataca") {
@@ -621,14 +535,12 @@ void Interacao::Jogar()
 			}
 			if(cmd=="load"){
 				string ficheiro;
-				Consola::clrscr_comandline();
-				Consola::gotoxy(3, 52);
-				cout << ">> Ficheiro: ";
-				cin >> ficheiro;
-
+				ss >> ficheiro;
 				jogo->lerComandosFicheiro(ficheiro);
 			}
 		}
+		Consola::clrscr();
+		MostraAmbienteGrafico();
 		jogo->turno();
 	}
 }
@@ -638,7 +550,7 @@ void Interacao::limpaParteDireita()
 	Consola::gotoxy(190, 2);
 	cout << "                                               ";
 	Consola::gotoxy(155, 4);
-	int i, j;
+	int i;
 	Consola::gotoxy(155, 4);
 	cout << "                                               ";
 	for ( i = 4; i < 30; i=i+2) {

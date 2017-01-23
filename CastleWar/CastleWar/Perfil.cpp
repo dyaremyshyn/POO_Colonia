@@ -18,7 +18,7 @@ void Perfil::addCar(Caracteristica * c)
 
 void Perfil::removeCar(Caracteristica * c)
 {
-	for (int i = 0; i < car.size(); i++)
+	for (unsigned int i = 0; i < car.size(); i++)
 		if (car.at(i)->getNome() == c->getNome())
 			car.erase(car.begin() + i);
 			
@@ -26,7 +26,7 @@ void Perfil::removeCar(Caracteristica * c)
 
 void Perfil::reCarByID(int idCar)
 {
-	for (int i = 0; i < car.size(); i++) {
+	for (unsigned int i = 0; i < car.size(); i++) {
 		if (car.at(i)->getID() == idCar) {
 			car.erase(car.begin() + i);
 		}

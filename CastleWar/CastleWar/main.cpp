@@ -13,5 +13,4 @@ int main(int argc, char** argv) {
 	control.MostraAmbienteGrafico();
 	control.Configurar_Jogo();
 	control.Jogar();
-	
 }

@@ -1,49 +1,22 @@
-﻿  Walker.cpp
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : Access to the path 'c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\debug\castlewar.exe' is denied.
+  Walker.cpp
   Torre.cpp
   Superior.cpp
   Ser.cpp
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\ser.cpp(111): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\ser.cpp(124): warning C4018: '<': signed/unsigned mismatch
   SecondChance.cpp
   Remedio.cpp
   Quinta.cpp
   Posicao.cpp
   Perfil.cpp
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\perfil.cpp(21): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\perfil.cpp(29): warning C4018: '<': signed/unsigned mismatch
   PeleDura.cpp
   main.cpp
   Jogo.cpp
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(35): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(37): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(54): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(63): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(72): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(82): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(93): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(106): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(114): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(181): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(270): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(279): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(305): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(320): warning C4018: '<=': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(324): warning C4018: '>': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(333): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(362): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(400): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(405): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(410): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(418): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(420): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(425): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(430): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(466): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(469): warning C4018: '<': signed/unsigned mismatch
+c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(97): warning C4018: '<': signed/unsigned mismatch
+c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(452): warning C4018: '<': signed/unsigned mismatch
   Interecao.cpp
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(217): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(227): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(641): warning C4101: 'j': unreferenced local variable
+c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(220): warning C4018: '<': signed/unsigned mismatch
+c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(230): warning C4018: '<': signed/unsigned mismatch
+c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(236): warning C4018: '<': signed/unsigned mismatch
   HeatSeeker.cpp
   Faca.cpp
   Espada.cpp
@@ -52,7 +25,6 @@ c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\i
   Consola.cpp
   Configuracoes.cpp
   Generating Code...
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(325): warning C4715: 'Jogo::escolhePosColonia': not all control paths return a value
   Compiling...
   Colonia.cpp
 c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\colonia.cpp(64): warning C4018: '<': signed/unsigned mismatch
@@ -65,5 +37,4 @@ c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\c
   Aluno.cpp
   Agressao.cpp
   Generating Code...
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\colonia.cpp(82): warning C4715: 'Colonia::saudeCastelo': not all control paths return a value
-  CastleWar.vcxproj -> C:\Users\Dmytro Yaremyshyn\Desktop\POO_Colonia\POO_Colonia\CastleWar\Debug\CastleWar.exe
+LINK : fatal error LNK1104: cannot open file 'C:\Users\Dmytro Yaremyshyn\Desktop\POO_Colonia\POO_Colonia\CastleWar\Debug\CastleWar.exe'

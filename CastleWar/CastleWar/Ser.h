@@ -14,10 +14,10 @@ class Posicao;
 
 class Ser {
 	int pos;
-	string nome;
+	char nome;
 	int custo;
 	vector<Caracteristica*> caracteristicas;
-	string bandeira;
+	char bandeira;
 	
 	int saude;
 	int maxSaude;
@@ -29,10 +29,10 @@ class Ser {
 	bool castelo;
 
 public:
-	Ser(string n, vector<Caracteristica*>c);
+	Ser(char n, vector<Caracteristica*>c);
 	~Ser();
 
-	string getNome();
+	char getNome();
 
 	void setPos(int p);
 	int getPos();

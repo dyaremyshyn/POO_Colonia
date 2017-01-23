@@ -14,7 +14,7 @@ class Torre : public Edificio {
 
 
 public:
-	Torre(string n, int c, int s, int d);
+	Torre(char n, int c, int s, int d);
 	~Torre();
 
 	void fazEfeito();

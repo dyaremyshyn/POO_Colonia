@@ -3,7 +3,7 @@
 Colonia::Colonia(char n, int m):nome(n), moedas(m){
 
 	posInicial = 0;
-	addEdificio(new Castelo("Castelo", 0, 50, 10));
+	addEdificio(new Castelo('C', 0, 50, 10));
 }
 
 Colonia::~Colonia()
@@ -75,8 +75,9 @@ void Colonia::addSer(Ser * s)
 int Colonia::saudeCastelo()
 {
 	for (int i = 0; i < edificios.size(); i++) {
-		if (edificios.at(i)->getNome() == "Castelo") {
+		if (edificios.at(i)->getNome() == 'C') {
 			return edificios.at(i)->getSaude();
 		}
 	}
+	return -1;
 }

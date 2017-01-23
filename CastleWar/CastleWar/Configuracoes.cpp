@@ -66,8 +66,4 @@ bool Configuracoes::leFicheiro(string nome_ficheiro) {
 	return false;
 };
 
-//void Configuracoes::getAsString()const {
-//
-//	cout << "tamanho:" << this->dificuldade << " tamanho:" << this->t  << " moedas:" << this->moedas << endl;
-//
-//};
+
