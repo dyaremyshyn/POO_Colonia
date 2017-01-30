@@ -2,12 +2,13 @@
 
 #ifndef BANDEIRA_H
 #define	BANDEIRA_H
-#include "Libraries.h"
+
 #include "Caracteristica.h"
 
+//class Caracteristica;
 class Ser;
 class Jogo;
-class Caracteristica;
+
 
 class Bandeira :public Caracteristica {
 	
@@ -16,7 +17,7 @@ public:
 	Bandeira(string n, int cm, int cf,int idCar);
 	~Bandeira();
 	
-	void fazEfeito(int p, Ser *s);                 
+	void fazEfeito(int p, Ser *s, Jogo *jogo);
 
 };
 

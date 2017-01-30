@@ -2,9 +2,9 @@
 #ifndef POSICAO_H
 #define	POSICAO_H
 #include "Libraries.h"
-#include "Edificio.h"
-#include "Ser.h"
-#include "Colonia.h"
+//#include "Edificio.h"
+//#include "Ser.h"
+//#include "Colonia.h"
 
 class Edificio;
 class Ser;

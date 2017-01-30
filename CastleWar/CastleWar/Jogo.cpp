@@ -1,4 +1,8 @@
 #include "Jogo.h"
+#include "Edificio.h"
+#include "Quinta.h"
+#include "Torre.h"
+
 
 Jogo::Jogo(string fConfig){
 
@@ -24,6 +28,11 @@ Jogo::Jogo() {
 
 Jogo::~Jogo(){
 	
+}
+
+vector<Perfil*> Jogo::getPerfil()
+{
+	return perfil;
 }
 
 void Jogo::mostraCarDePerfil(char c)
@@ -71,7 +80,7 @@ void Jogo::upgradeBuild(int id)
 {
 	for (unsigned int i = 0; i < myColonia->getEdificios().size(); i++) {
 		if (myColonia->getEdificios().at(i)->getEID() == id) {
-			myColonia->getEdificios().at(i)->aumentaNivel();
+			myColonia->getEdificios().at(i)->upgrade();
 			myColonia->setMoedas(myColonia->getMoedas() - 10);
 		}
 	}
@@ -105,7 +114,7 @@ void Jogo::ataca()
 {
 	for (unsigned int i = 0; i < myColonia->getSeres().size(); i++) {
 		myColonia->getSeres().at(i)->mover();
-		myColonia->getSeres().at(i)->efeitoCaracteristicas();
+		myColonia->getSeres().at(i)->efeitoCaracteristicas(this);
 	}
 }
 
@@ -385,10 +394,10 @@ void Jogo::buildEdif(char nomeEdif, int pos, Colonia *c)
 		if (mundo.at(pos)->verificaEdifico() == false) {
 			Edificio *e=nullptr;
 			if (nomeEdif ==  'Q') {
-				e = new Quinta(nomeEdif, 20, 20, 10);
+				e = new Quinta(nomeEdif,c->getNome(), 20, 20, 10);
 			}
 			else if (nomeEdif == 'T') {
-				e = new Torre(nomeEdif, 30, 20, 10);
+				e = new Torre(nomeEdif, c->getNome(), 30, 20, 10);
 			}
 			e->setPos(pos);
 			c->addEdificio(e);
@@ -472,10 +481,10 @@ void Jogo::turno()
 
 	if (myColonia->saudeCastelo()>0) {
 		for (unsigned int i = 0; i < myColonia->getEdificios().size(); i++) {
-			myColonia->getEdificios().at(i)->fazEfeito();
+			myColonia->getEdificios().at(i)->fazEfeito(this);
 		}
 		for (unsigned int j = 0; j < myColonia->getSeres().size(); j++) {
-			myColonia->getSeres().at(j)->efeitoCaracteristicas();
+			myColonia->getSeres().at(j)->efeitoCaracteristicas(this);
 		}
 
 		removeMortos();

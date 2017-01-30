@@ -4,9 +4,9 @@
 #define	CARACTERISTICA_H
 #include "Libraries.h"
 
-class Ser;
+
 class Jogo;
-class Posicao;
+class Ser;
 
 class Caracteristica {
 protected:
@@ -23,7 +23,7 @@ public:
 
 	int getCustoMonetario();
 	int getCustoForça();
-	virtual void fazEfeito(int p, Ser *s) = 0;
+	virtual void fazEfeito(int p, Ser *s,Jogo *jogo) = 0;
 	int getID();
 	
 };

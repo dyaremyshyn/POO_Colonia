@@ -2,13 +2,14 @@
 #ifndef PERFIL_H
 #define	PERFIL_H
 #include "Libraries.h"
-#include "Edificio.h"
-#include "Ser.h"
-#include "Colonia.h"
+//#include "Edificio.h"
+//#include "Ser.h"
+//#include "Colonia.h"
 #include "Caracteristica.h"
 
 class Edificio;
 class Ser;
+class Caracteristica;
 
 class Perfil {
 	char nome;

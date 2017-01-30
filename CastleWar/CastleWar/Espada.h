@@ -2,14 +2,11 @@
 #ifndef ESPADA_H
 #define	ESPADA_H
 
-#include "Libraries.h"
 #include "Caracteristica.h"
-#include "Ser.h"
-#include "Posicao.h"
 
 class Ser;
 class Jogo;
-class Caracteristica;
+//class Caracteristica;
 
 class Espada :public Caracteristica {
 	int cont;
@@ -20,7 +17,7 @@ public:
 	void setCont(int c);
 	int getCont();
 
-	void fazEfeito(int p, Ser *s);
+	void fazEfeito(int p, Ser *s, Jogo *jogo);
 
 };
 

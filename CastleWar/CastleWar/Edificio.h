@@ -3,6 +3,10 @@
 #ifndef EDIFICIO_H
 #define	EDIFICIO_H
 #include "Libraries.h"
+#include "Jogo.h"
+#include "Posicao.h"
+#include "Ser.h"
+#include "Colonia.h"
 
 class Ser;
 class Jogo;
@@ -15,13 +19,17 @@ class Edificio {
 	int pos;
 	int eid=0;
 	int nivel;
+	char bandeira;
 
 public:
-	Edificio(char n, int c, int s, int d);
+	Edificio(char n, char b, int c, int s, int d);
 	~Edificio();
 
 	char getNome();
 	void setNome(char n);
+
+	char getBandeira();
+	void setBandeira(char b);
 	
 	int getNivel();
 	void setNivel(int n);
@@ -40,7 +48,8 @@ public:
 
 	int getEID();
 
-	virtual void fazEfeito() = 0;
+	virtual void fazEfeito(Jogo *jogo) = 0;
+	virtual void upgrade() = 0;
 
 	void aumentaNivel();
 

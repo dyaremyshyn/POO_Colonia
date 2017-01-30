@@ -2,14 +2,13 @@
 #ifndef BUILDSEEKER_H
 #define	BUILDSEEKER_H
 
-#include "Libraries.h"
 #include "Caracteristica.h"
-#include "Ser.h"
-#include "Posicao.h"
+
 
 class Ser;
 class Jogo;
-class Caracteristica;
+class Edificio;
+//class Caracteristica;
 
 class BuildSeeker :public Caracteristica {
 
@@ -18,7 +17,7 @@ public:
 	BuildSeeker(string n, int cm, int cf,int idCar);
 	~BuildSeeker();
 
-	void fazEfeito( int p, Ser *s);
+	void fazEfeito( int p, Ser *s, Jogo *jogo);
 
 };
 

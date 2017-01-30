@@ -2,12 +2,12 @@
 #ifndef COLONIA_H
 #define	COLONIA_H
 #include "Libraries.h"
-#include "Edificio.h"
-#include "Castelo.h"
+//#include "Edificio.h"
 
 class Ser;
 class Edificio;
 class Jogo;
+class Castelo;
 
 /*
 COLONIA recebe acções:
@@ -18,7 +18,6 @@ COLONIA recebe acções:
 	fazer seres
 */
 
-#define TAM 5
 
 class Colonia {
 	

@@ -1,9 +1,11 @@
 #include "Colonia.h"
+#include "Castelo.h"
+#include "Edificio.h"
 
 Colonia::Colonia(char n, int m):nome(n), moedas(m){
 
 	posInicial = 0;
-	addEdificio(new Castelo('C', 0, 50, 10));
+	addEdificio(new Castelo('C',getNome(), 0, 50, 10));
 }
 
 Colonia::~Colonia()

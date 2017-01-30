@@ -1,4 +1,9 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : Access to the path 'c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\debug\castlewar.exe' is denied.
+﻿  Interecao.cpp
+c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(221): warning C4018: '<': signed/unsigned mismatch
+c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(231): warning C4018: '<': signed/unsigned mismatch
+c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(237): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Skipping... (no relevant changes detected)
   Walker.cpp
   Torre.cpp
   Superior.cpp
@@ -6,29 +11,14 @@
   SecondChance.cpp
   Remedio.cpp
   Quinta.cpp
-  Posicao.cpp
-  Perfil.cpp
   PeleDura.cpp
-  main.cpp
   Jogo.cpp
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(97): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\jogo.cpp(452): warning C4018: '<': signed/unsigned mismatch
-  Interecao.cpp
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(220): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(230): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\interecao.cpp(236): warning C4018: '<': signed/unsigned mismatch
   HeatSeeker.cpp
   Faca.cpp
   Espada.cpp
   Edificio.cpp
   Ecologico.cpp
-  Consola.cpp
-  Configuracoes.cpp
-  Generating Code...
-  Compiling...
   Colonia.cpp
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\colonia.cpp(64): warning C4018: '<': signed/unsigned mismatch
-c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\colonia.cpp(77): warning C4018: '<': signed/unsigned mismatch
   Castelo.cpp
   Caracteristica.cpp
   BuildSeeker.cpp
@@ -36,5 +26,4 @@ c:\users\dmytro yaremyshyn\desktop\poo_colonia\poo_colonia\castlewar\castlewar\c
   Armadura.cpp
   Aluno.cpp
   Agressao.cpp
-  Generating Code...
-LINK : fatal error LNK1104: cannot open file 'C:\Users\Dmytro Yaremyshyn\Desktop\POO_Colonia\POO_Colonia\CastleWar\Debug\CastleWar.exe'
+  CastleWar.vcxproj -> C:\Users\Dmytro Yaremyshyn\Desktop\POO_Colonia\POO_Colonia\CastleWar\Debug\CastleWar.exe

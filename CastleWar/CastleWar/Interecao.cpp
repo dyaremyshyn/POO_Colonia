@@ -1,7 +1,8 @@
 #include "Interacao.h"
 #include <sstream>
 #include "Jogo.h"
-class Evento;
+#include "Ser.h"
+#include "Edificio.h"
 
 Interacao::Interacao()
 {
@@ -200,14 +201,6 @@ void Interacao::MostraAmbienteGrafico()
 	cout << "<<Comandos>>";
 	Consola::gotoxy(3, 52);
 	cout << ">>:";
-	
-	
-	/*********************************************Desenhar castelos/seres****************************************/
-
-
-	
-	/*****************************************Acabou de Desenhar Salas**************************************/
-	
 
 }
 
@@ -235,7 +228,7 @@ void Interacao::MostraMundo(){
 		int x = 10, y = 10;
 		for (unsigned int i = inicio; i < fim; i++){
 			Consola::gotoxy(x, y);
-			Consola::setTextColor(Consola::VERDE);
+			
 			if(jogo->getMundo().at(i)->getSer()!=nullptr)
 				s = jogo->getMundo().at(i)->getSer()->getNome();
 			cout << s;
@@ -280,7 +273,8 @@ int Interacao::getFoco()
 
 void Interacao::Jogo_A_Iniciar()
 {
-
+	int i = 0,j=0,k=0;
+	string car = "";
 	/*************************************Mostrar comandos disponiveis********************************/
 	Consola::gotoxy(190, 2);
 	cout << "Configurar Jogo: ";
@@ -307,15 +301,30 @@ void Interacao::Jogo_A_Iniciar()
 	Consola::gotoxy(155, 24);
 	cout << "inicio -> Comecar a jogar";
 
+
+	//*************************************************************************************
+	Consola::gotoxy(155, 28);
+	cout << "Perfis:";	
+	/*if (!jogo->getPerfil().empty()) {
+		for (i; i < jogo->getPerfil().size(); i++) {
+			Consola::gotoxy(155, 30 + k);
+			cout << jogo->getPerfil().at(i)->getNome();
+			k++;
+			if (!jogo->getPerfil().at(i)->getCaracteristicas().empty()) {
+				for (j = 0; j < jogo->getPerfil().at(i)->getCaracteristicas().size(); j++) {
+					car += jogo->getPerfil().at(i)->getCaracteristicas().at(j)->getID() + " ";
+				}
+				Consola::gotoxy(155, 30 + k);
+				cout << car;
+				k++;
+
+			}
+		}
+	}*/
+
 }
 
 void Interacao::Configurar_Jogo() {
-
-	//getline(cin, comando)
-	//stringstream ss;
-	//ss << aMinhaString << 12 ;
-	//ss >> variavel;
-	//ss >> outraVariavel
 
 	while (1) {
 		Consola::gotoxy(3, 55);
@@ -441,6 +450,14 @@ void Interacao::ComandosJogo() {
 	cout << "fim -> Termina a simulacao";
 	Consola::gotoxy(155, 40);
 	cout << "load ficheiro -> Carrega comandos de um ficheiro";
+
+	Consola::gotoxy(155, 45);
+	cout << "Moedas: " << jogo->getMyColonia()->getMoedas();
+	Consola::gotoxy(155, 46);
+	cout << "Saude Castelo: " << jogo->getMyColonia()->getEdificios().at(0)->getSaude();
+	Consola::gotoxy(155, 47);
+	cout << "Num de Edif: " << jogo->getMyColonia()->getEdificios().size();
+
 }
 
 
@@ -448,8 +465,9 @@ void Interacao::Jogar()
 {
 	limpaParteDireita();
 	ComandosJogo();
-	MostraMundo();
-	//jogo->DadosJogo();
+	
+	//MostraMundo();
+	
 	configuracao = true;
 	while (1) { //Ler comandos quando estamos a jogar
 		Consola::gotoxy(3, 55);

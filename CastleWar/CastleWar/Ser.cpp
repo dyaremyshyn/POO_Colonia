@@ -19,6 +19,16 @@ Ser::Ser(char n, vector<Caracteristica*>c):nome(n), caracteristicas(c) {
 
 Ser::~Ser(){}
 
+char Ser::getBandeira()
+{
+	return bandeira;
+}
+
+void Ser::setBandeira(char b)
+{
+	bandeira = b;
+}
+
 char Ser::getNome()
 {
 	return nome;
@@ -119,10 +129,10 @@ void Ser::mover()
 	setPos(getPos() + pos);
 }
 
-void Ser::efeitoCaracteristicas()
+void Ser::efeitoCaracteristicas(Jogo *jogo)
 {
 	for (unsigned int i = 0; i < caracteristicas.size(); i++) {
-		caracteristicas[i]->fazEfeito(pos, this);
+		caracteristicas[i]->fazEfeito(pos, this,jogo);
 	}
 
 }

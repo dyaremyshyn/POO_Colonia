@@ -4,11 +4,11 @@
 #include "Libraries.h"
 #include "Colonia.h"
 #include "Posicao.h"
-#include "Castelo.h"
-#include "Quinta.h"
+//#include "Castelo.h"
+//#include "Quinta.h"
 #include "Perfil.h"
-#include "Torre.h"
-
+//#include "Torre.h"
+//
 //INCLUDES DE CARACTERISTICAS
 #include "Bandeira.h"
 #include "Superior.h"
@@ -30,6 +30,9 @@ class Sala;
 class Evento;
 class Colonia;
 class Posicao;
+class Perfil;
+class Quinta;
+class Torre;
 
 class Jogo{
 
@@ -51,7 +54,7 @@ public:
 	Jogo();
     ~Jogo();
 
-	
+	vector<Perfil*> getPerfil();
 
 	void addPerfil(Perfil* p);
 	void addCarAoPerfil(char perfil,int idCar);
@@ -59,16 +62,12 @@ public:
 	void removePerfil(char p);
 
 	void loadFicheiro(string f);
-	//void ComecarAJogar();
 
-	//void addPrimeirosSeres();
-	//void addPrimeirosEdificios();
-	//int escolhePosColonia(int col);
 	void preencheMundo();
 	Colonia* getMyColonia();
 
 	vector <Posicao*> getMundo();
-	vector<Colonia*> getOpoColonias();
+	vector <Colonia*> getOpoColonias();
 	
 	//FUNCOES DE CMD MODO JOGO ON
 	void setMoedasNumaColonia(char c, int m);
@@ -92,7 +91,6 @@ public:
 	void criaMyColonia(int m);
 	void criaColOponentes(int m, int o);
 
-	//void DadosJogo();
 };
 
 #endif	/* MENU_H */

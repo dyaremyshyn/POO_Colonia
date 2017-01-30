@@ -5,6 +5,7 @@
 
 #include "Libraries.h"
 #include "Posicao.h"
+#include "Jogo.h"
 
 class Ser;
 class Edificio;
@@ -31,6 +32,8 @@ class Ser {
 public:
 	Ser(char n, vector<Caracteristica*>c);
 	~Ser();
+	char getBandeira();
+	void setBandeira(char b);
 
 	char getNome();
 
@@ -62,7 +65,7 @@ public:
 
 
 	void mover();
-	void efeitoCaracteristicas();
+	void efeitoCaracteristicas(Jogo *jogo);
 
 
 	boolean dentroCastelo();

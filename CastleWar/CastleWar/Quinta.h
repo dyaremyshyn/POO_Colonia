@@ -2,22 +2,27 @@
 
 #ifndef QUINTA_H
 #define	QUINTA_H
-#include "Libraries.h"
+
 #include "Edificio.h"
 
-class Ser;
-class Jogo;
+//class Ser;
+//class Jogo;
+//class Edificio;
 
 class Quinta : public Edificio {
 	int custo;
 	string nome;
-	
+	int fabricaMoedas;
 
 public:
-	Quinta(char n, int c, int s, int d);
+	Quinta(char n, char b, int c, int s, int d);
 	~Quinta();
 
-	void fazEfeito();
+	void fazEfeito(Jogo *jogo);
+	void upgrade();
+
+	void setFabricaMoedas(int m);
+	int getFabricaMoedas();
 
 };
 #endif	/* QUINTA_H */

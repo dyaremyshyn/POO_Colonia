@@ -3,15 +3,10 @@
 #ifndef AGRESSAO_H
 #define	AGRESSAO_H
 
-#include "Libraries.h"
-#include "Caracteristica.h"
-#include "Ser.h"
-#include "Posicao.h"
+#include"Caracteristica.h"
 
-class Ser;
 class Jogo;
-class Caracteristica;
-class Posicao;
+class Ser;
 
 class Agressao :public Caracteristica {
 
@@ -20,7 +15,7 @@ public:
 	Agressao(string n, int cm, int cf,int idCar);
 	~Agressao();
 
-	void fazEfeito(int p, Ser *s);
+	void fazEfeito(int p, Ser *s, Jogo *jogo);
 
 };
 

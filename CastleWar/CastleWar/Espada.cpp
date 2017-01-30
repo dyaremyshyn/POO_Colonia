@@ -1,4 +1,6 @@
 #include "Espada.h"
+#include "Ser.h"
+#include "Jogo.h"
 
 Espada::Espada(string n, int cm, int cf,int idCar) : Caracteristica(n, cm, cf, idCar)
 {
@@ -19,7 +21,7 @@ int Espada::getCont()
 	return cont;
 }
 
-void Espada::fazEfeito(int p, Ser * s)
+void Espada::fazEfeito(int p, Ser * s, Jogo *jogo)
 {
 	if (getCont() < 2) {
 		s->setAtaque(s->getAtaque() + 3);

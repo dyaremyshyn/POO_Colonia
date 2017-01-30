@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Jogo.h"
-
-
+class Jogo;
+class Ser;
+class Edificio;
 class Interacao {
 	
 public:

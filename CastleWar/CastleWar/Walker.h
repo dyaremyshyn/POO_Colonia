@@ -2,23 +2,20 @@
 
 #ifndef WALKER_H
 #define	WALKER_H
-#include "Libraries.h"
-#include "Caracteristica.h"
-#include "Ser.h"
-#include "Posicao.h"
 
+#include "Caracteristica.h"
 class Ser;
 class Jogo;
-class Caracteristica;
+//class Caracteristica;
 
 class Walker :public Caracteristica {
-
+	bool andarDireita = true;
 
 public:
 	Walker(string n, int cm, int cf,int idCar);
 	~Walker();
 
-	void fazEfeito(int p, Ser *s);
+	void fazEfeito(int p, Ser *s, Jogo *jogo);
 
 };
 

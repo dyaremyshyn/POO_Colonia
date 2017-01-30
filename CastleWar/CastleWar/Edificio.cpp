@@ -1,6 +1,6 @@
 #include "Edificio.h"
 
-Edificio::Edificio(char n, int c, int s, int d): nome(n), custo(c), saude(s), defesa(d)
+Edificio::Edificio(char n, char b, int c, int s, int d): nome(n),bandeira(b), custo(c), saude(s), defesa(d)
 {
 	eid++;
 	nivel = 1;
@@ -19,6 +19,16 @@ char Edificio::getNome()
 void Edificio::setNome(char n)
 {
 	nome = n;
+}
+
+char Edificio::getBandeira()
+{
+	return bandeira;
+}
+
+void Edificio::setBandeira(char b)
+{
+	bandeira = b;
 }
 
 int Edificio::getNivel()
